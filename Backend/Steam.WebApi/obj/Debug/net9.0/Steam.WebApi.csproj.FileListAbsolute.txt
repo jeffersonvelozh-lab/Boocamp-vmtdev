@@ -1,0 +1,76 @@
+C:\Users\Usuario\OneDrive\Escritorio\Boocamp V\Back end\Steam\Steam.WebApi\bin\Debug\net9.0\appsettings.Development.json
+C:\Users\Usuario\OneDrive\Escritorio\Boocamp V\Back end\Steam\Steam.WebApi\bin\Debug\net9.0\appsettings.json
+C:\Users\Usuario\OneDrive\Escritorio\Boocamp V\Back end\Steam\Steam.WebApi\bin\Debug\net9.0\Steam.WebApi.staticwebassets.endpoints.json
+C:\Users\Usuario\OneDrive\Escritorio\Boocamp V\Back end\Steam\Steam.WebApi\bin\Debug\net9.0\Steam.WebApi.exe
+C:\Users\Usuario\OneDrive\Escritorio\Boocamp V\Back end\Steam\Steam.WebApi\bin\Debug\net9.0\Steam.WebApi.deps.json
+C:\Users\Usuario\OneDrive\Escritorio\Boocamp V\Back end\Steam\Steam.WebApi\bin\Debug\net9.0\Steam.WebApi.runtimeconfig.json
+C:\Users\Usuario\OneDrive\Escritorio\Boocamp V\Back end\Steam\Steam.WebApi\bin\Debug\net9.0\Steam.WebApi.dll
+C:\Users\Usuario\OneDrive\Escritorio\Boocamp V\Back end\Steam\Steam.WebApi\bin\Debug\net9.0\Steam.WebApi.pdb
+C:\Users\Usuario\OneDrive\Escritorio\Boocamp V\Back end\Steam\Steam.WebApi\bin\Debug\net9.0\Microsoft.AspNetCore.OpenApi.dll
+C:\Users\Usuario\OneDrive\Escritorio\Boocamp V\Back end\Steam\Steam.WebApi\bin\Debug\net9.0\Microsoft.OpenApi.dll
+C:\Users\Usuario\OneDrive\Escritorio\Boocamp V\Back end\Steam\Steam.WebApi\bin\Debug\net9.0\Steam.Application.dll
+C:\Users\Usuario\OneDrive\Escritorio\Boocamp V\Back end\Steam\Steam.WebApi\bin\Debug\net9.0\Steam.Shared.dll
+C:\Users\Usuario\OneDrive\Escritorio\Boocamp V\Back end\Steam\Steam.WebApi\bin\Debug\net9.0\Steam.Application.pdb
+C:\Users\Usuario\OneDrive\Escritorio\Boocamp V\Back end\Steam\Steam.WebApi\bin\Debug\net9.0\Steam.Shared.pdb
+C:\Users\Usuario\OneDrive\Escritorio\Boocamp V\Back end\Steam\Steam.WebApi\obj\Debug\net9.0\Steam.WebApi.csproj.AssemblyReference.cache
+C:\Users\Usuario\OneDrive\Escritorio\Boocamp V\Back end\Steam\Steam.WebApi\obj\Debug\net9.0\rpswa.dswa.cache.json
+C:\Users\Usuario\OneDrive\Escritorio\Boocamp V\Back end\Steam\Steam.WebApi\obj\Debug\net9.0\Steam.WebApi.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Usuario\OneDrive\Escritorio\Boocamp V\Back end\Steam\Steam.WebApi\obj\Debug\net9.0\Steam.WebApi.AssemblyInfoInputs.cache
+C:\Users\Usuario\OneDrive\Escritorio\Boocamp V\Back end\Steam\Steam.WebApi\obj\Debug\net9.0\Steam.WebApi.AssemblyInfo.cs
+C:\Users\Usuario\OneDrive\Escritorio\Boocamp V\Back end\Steam\Steam.WebApi\obj\Debug\net9.0\Steam.WebApi.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\OneDrive\Escritorio\Boocamp V\Back end\Steam\Steam.WebApi\obj\Debug\net9.0\Steam.WebApi.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Usuario\OneDrive\Escritorio\Boocamp V\Back end\Steam\Steam.WebApi\obj\Debug\net9.0\Steam.WebApi.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Usuario\OneDrive\Escritorio\Boocamp V\Back end\Steam\Steam.WebApi\obj\Debug\net9.0\rjimswa.dswa.cache.json
+C:\Users\Usuario\OneDrive\Escritorio\Boocamp V\Back end\Steam\Steam.WebApi\obj\Debug\net9.0\rjsmrazor.dswa.cache.json
+C:\Users\Usuario\OneDrive\Escritorio\Boocamp V\Back end\Steam\Steam.WebApi\obj\Debug\net9.0\rjsmcshtml.dswa.cache.json
+C:\Users\Usuario\OneDrive\Escritorio\Boocamp V\Back end\Steam\Steam.WebApi\obj\Debug\net9.0\scopedcss\bundle\Steam.WebApi.styles.css
+C:\Users\Usuario\OneDrive\Escritorio\Boocamp V\Back end\Steam\Steam.WebApi\obj\Debug\net9.0\staticwebassets.build.json
+C:\Users\Usuario\OneDrive\Escritorio\Boocamp V\Back end\Steam\Steam.WebApi\obj\Debug\net9.0\staticwebassets.build.json.cache
+C:\Users\Usuario\OneDrive\Escritorio\Boocamp V\Back end\Steam\Steam.WebApi\obj\Debug\net9.0\staticwebassets.development.json
+C:\Users\Usuario\OneDrive\Escritorio\Boocamp V\Back end\Steam\Steam.WebApi\obj\Debug\net9.0\staticwebassets.build.endpoints.json
+C:\Users\Usuario\OneDrive\Escritorio\Boocamp V\Back end\Steam\Steam.WebApi\obj\Debug\net9.0\swae.build.ex.cache
+C:\Users\Usuario\OneDrive\Escritorio\Boocamp V\Back end\Steam\Steam.WebApi\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
+C:\Users\Usuario\OneDrive\Escritorio\Boocamp V\Back end\Steam\Steam.WebApi\obj\Debug\net9.0\Steam.We.06F86327.Up2Date
+C:\Users\Usuario\OneDrive\Escritorio\Boocamp V\Back end\Steam\Steam.WebApi\obj\Debug\net9.0\Steam.WebApi.dll
+C:\Users\Usuario\OneDrive\Escritorio\Boocamp V\Back end\Steam\Steam.WebApi\obj\Debug\net9.0\refint\Steam.WebApi.dll
+C:\Users\Usuario\OneDrive\Escritorio\Boocamp V\Back end\Steam\Steam.WebApi\obj\Debug\net9.0\Steam.WebApi.pdb
+C:\Users\Usuario\OneDrive\Escritorio\Boocamp V\Back end\Steam\Steam.WebApi\obj\Debug\net9.0\Steam.WebApi.genruntimeconfig.cache
+C:\Users\Usuario\OneDrive\Escritorio\Boocamp V\Back end\Steam\Steam.WebApi\obj\Debug\net9.0\ref\Steam.WebApi.dll
+C:\Users\Usuario\OneDrive\Escritorio\Boocamp V\Backend\Steam\Steam.WebApi\bin\Debug\net9.0\appsettings.Development.json
+C:\Users\Usuario\OneDrive\Escritorio\Boocamp V\Backend\Steam\Steam.WebApi\bin\Debug\net9.0\appsettings.json
+C:\Users\Usuario\OneDrive\Escritorio\Boocamp V\Backend\Steam\Steam.WebApi\bin\Debug\net9.0\Steam.WebApi.staticwebassets.endpoints.json
+C:\Users\Usuario\OneDrive\Escritorio\Boocamp V\Backend\Steam\Steam.WebApi\bin\Debug\net9.0\Steam.WebApi.exe
+C:\Users\Usuario\OneDrive\Escritorio\Boocamp V\Backend\Steam\Steam.WebApi\bin\Debug\net9.0\Steam.WebApi.deps.json
+C:\Users\Usuario\OneDrive\Escritorio\Boocamp V\Backend\Steam\Steam.WebApi\bin\Debug\net9.0\Steam.WebApi.runtimeconfig.json
+C:\Users\Usuario\OneDrive\Escritorio\Boocamp V\Backend\Steam\Steam.WebApi\bin\Debug\net9.0\Steam.WebApi.dll
+C:\Users\Usuario\OneDrive\Escritorio\Boocamp V\Backend\Steam\Steam.WebApi\bin\Debug\net9.0\Steam.WebApi.pdb
+C:\Users\Usuario\OneDrive\Escritorio\Boocamp V\Backend\Steam\Steam.WebApi\bin\Debug\net9.0\Microsoft.AspNetCore.OpenApi.dll
+C:\Users\Usuario\OneDrive\Escritorio\Boocamp V\Backend\Steam\Steam.WebApi\bin\Debug\net9.0\Microsoft.OpenApi.dll
+C:\Users\Usuario\OneDrive\Escritorio\Boocamp V\Backend\Steam\Steam.WebApi\bin\Debug\net9.0\Steam.Application.dll
+C:\Users\Usuario\OneDrive\Escritorio\Boocamp V\Backend\Steam\Steam.WebApi\bin\Debug\net9.0\Steam.Shared.dll
+C:\Users\Usuario\OneDrive\Escritorio\Boocamp V\Backend\Steam\Steam.WebApi\bin\Debug\net9.0\Steam.Application.pdb
+C:\Users\Usuario\OneDrive\Escritorio\Boocamp V\Backend\Steam\Steam.WebApi\bin\Debug\net9.0\Steam.Shared.pdb
+C:\Users\Usuario\OneDrive\Escritorio\Boocamp V\Backend\Steam\Steam.WebApi\obj\Debug\net9.0\Steam.WebApi.csproj.AssemblyReference.cache
+C:\Users\Usuario\OneDrive\Escritorio\Boocamp V\Backend\Steam\Steam.WebApi\obj\Debug\net9.0\rpswa.dswa.cache.json
+C:\Users\Usuario\OneDrive\Escritorio\Boocamp V\Backend\Steam\Steam.WebApi\obj\Debug\net9.0\Steam.WebApi.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Usuario\OneDrive\Escritorio\Boocamp V\Backend\Steam\Steam.WebApi\obj\Debug\net9.0\Steam.WebApi.AssemblyInfoInputs.cache
+C:\Users\Usuario\OneDrive\Escritorio\Boocamp V\Backend\Steam\Steam.WebApi\obj\Debug\net9.0\Steam.WebApi.AssemblyInfo.cs
+C:\Users\Usuario\OneDrive\Escritorio\Boocamp V\Backend\Steam\Steam.WebApi\obj\Debug\net9.0\Steam.WebApi.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\OneDrive\Escritorio\Boocamp V\Backend\Steam\Steam.WebApi\obj\Debug\net9.0\Steam.WebApi.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Usuario\OneDrive\Escritorio\Boocamp V\Backend\Steam\Steam.WebApi\obj\Debug\net9.0\Steam.WebApi.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Usuario\OneDrive\Escritorio\Boocamp V\Backend\Steam\Steam.WebApi\obj\Debug\net9.0\rjimswa.dswa.cache.json
+C:\Users\Usuario\OneDrive\Escritorio\Boocamp V\Backend\Steam\Steam.WebApi\obj\Debug\net9.0\rjsmrazor.dswa.cache.json
+C:\Users\Usuario\OneDrive\Escritorio\Boocamp V\Backend\Steam\Steam.WebApi\obj\Debug\net9.0\rjsmcshtml.dswa.cache.json
+C:\Users\Usuario\OneDrive\Escritorio\Boocamp V\Backend\Steam\Steam.WebApi\obj\Debug\net9.0\scopedcss\bundle\Steam.WebApi.styles.css
+C:\Users\Usuario\OneDrive\Escritorio\Boocamp V\Backend\Steam\Steam.WebApi\obj\Debug\net9.0\staticwebassets.build.json
+C:\Users\Usuario\OneDrive\Escritorio\Boocamp V\Backend\Steam\Steam.WebApi\obj\Debug\net9.0\staticwebassets.build.json.cache
+C:\Users\Usuario\OneDrive\Escritorio\Boocamp V\Backend\Steam\Steam.WebApi\obj\Debug\net9.0\staticwebassets.development.json
+C:\Users\Usuario\OneDrive\Escritorio\Boocamp V\Backend\Steam\Steam.WebApi\obj\Debug\net9.0\staticwebassets.build.endpoints.json
+C:\Users\Usuario\OneDrive\Escritorio\Boocamp V\Backend\Steam\Steam.WebApi\obj\Debug\net9.0\swae.build.ex.cache
+C:\Users\Usuario\OneDrive\Escritorio\Boocamp V\Backend\Steam\Steam.WebApi\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
+C:\Users\Usuario\OneDrive\Escritorio\Boocamp V\Backend\Steam\Steam.WebApi\obj\Debug\net9.0\Steam.We.06F86327.Up2Date
+C:\Users\Usuario\OneDrive\Escritorio\Boocamp V\Backend\Steam\Steam.WebApi\obj\Debug\net9.0\Steam.WebApi.dll
+C:\Users\Usuario\OneDrive\Escritorio\Boocamp V\Backend\Steam\Steam.WebApi\obj\Debug\net9.0\refint\Steam.WebApi.dll
+C:\Users\Usuario\OneDrive\Escritorio\Boocamp V\Backend\Steam\Steam.WebApi\obj\Debug\net9.0\Steam.WebApi.pdb
+C:\Users\Usuario\OneDrive\Escritorio\Boocamp V\Backend\Steam\Steam.WebApi\obj\Debug\net9.0\Steam.WebApi.genruntimeconfig.cache
+C:\Users\Usuario\OneDrive\Escritorio\Boocamp V\Backend\Steam\Steam.WebApi\obj\Debug\net9.0\ref\Steam.WebApi.dll

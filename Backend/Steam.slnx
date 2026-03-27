@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="Steam.Application/Steam.Application.csproj" />
+  <Project Path="Steam.Shared/Steam.Shared.csproj" />
+  <Project Path="Steam.WebApi/Steam.WebApi.csproj" />
+</Solution>
