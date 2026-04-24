@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Steam.Domain\Steam.Domain.csproj" />
+    <ProjectReference Include="..\Steam.Shared\Steam.Shared.csproj" />
+  </ItemGroup>
+
+</Project>

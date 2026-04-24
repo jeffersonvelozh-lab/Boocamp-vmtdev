@@ -31,9 +31,9 @@ namespace Steam.WebApi.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetAll([FromBody] GetAllUserRequest model)
+        public async Task<IActionResult> GetAll([FromBody] FilterUserRequest model)
         {
-            return Ok(PesponseHelper.Create(userService.GetAll(model.Limit ?? 0, model.Offset ?? 0)));
+            return Ok(PesponseHelper.Create(userService.Get(model)));
         }
 
         [HttpGet("{id:guid}")]

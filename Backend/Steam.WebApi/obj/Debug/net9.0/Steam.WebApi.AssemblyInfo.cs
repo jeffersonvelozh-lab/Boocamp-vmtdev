@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Steam.WebApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+315a543c7ee530414da9a0b63b9417609d519324")]
 [assembly: System.Reflection.AssemblyProductAttribute("Steam.WebApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Steam.WebApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

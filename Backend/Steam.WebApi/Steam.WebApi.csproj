@@ -8,10 +8,16 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.14" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.14">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Steam.Application\Steam.Application.csproj" />
+    <ProjectReference Include="..\Steam.Domain\Steam.Domain.csproj" />
+    <ProjectReference Include="..\Steam.Infrastructure\Steam.Infrastructure.csproj" />
     <ProjectReference Include="..\Steam.Shared\Steam.Shared.csproj" />
   </ItemGroup>
 

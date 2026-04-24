@@ -12,7 +12,7 @@ namespace Steam.Application.Services
     public class UserService(Cache<UserDto> cache) : IUserService
 
     {
-        public GenericResponse<UserDto> Create(CreateUserRequest modl)
+        public async Task<GenericResponse<UserDto>> Create(CreateUserRequest modl)
         {
             var User = new UserDto()
             {
@@ -30,7 +30,12 @@ namespace Steam.Application.Services
             return PesponseHelper.Create(User);
         }
 
-        public GenericResponse<bool> Delete(Guid UserId)
+        public Task CreateFirstUser()
+        {
+            throw new NotImplementedException();
+        }
+
+        public async Task<GenericResponse<bool>> Delete(Guid UserId)
         {
             var Existe = cache.Get(UserId.ToString());
 
@@ -43,24 +48,18 @@ namespace Steam.Application.Services
             return PesponseHelper.Create(true);
         }
 
-        public GenericResponse<bool> Delete(UpdateUserRequest modl)
-        {
-            throw new NotImplementedException();
-        }
-
-        public GenericResponse<UserDto?> Get(Guid UserId)
+        public async Task<GenericResponse<UserDto?>> Get(Guid UserId)
         {
             var usuario = cache.Get(UserId.ToString());
             return PesponseHelper.Create(usuario);
         }
 
-        public GenericResponse<List<UserDto>> GetAll(int limit, int offset)
+        public GenericResponse<List<UserDto>> Get(FilterUserRequest model)
         {
-            var usuario = cache.Get();
-            return PesponseHelper.Create(usuario);
+            throw new NotImplementedException();
         }
 
-        public GenericResponse<UserDto> Update(UpdateUserRequest modl)
+        public Task<GenericResponse<UserDto>> Update(Guid UserId, UpdateUserRequest modl)
         {
             throw new NotImplementedException();
         }

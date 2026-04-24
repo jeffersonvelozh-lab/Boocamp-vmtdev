@@ -1,5 +1,7 @@
 <Solution>
   <Project Path="Steam.Application/Steam.Application.csproj" />
+  <Project Path="Steam.Domain/Steam.Domain.csproj" Id="9c4d084c-fc08-48b5-b0e6-1ba62b38cd97" />
+  <Project Path="Steam.Infrastructure/Steam.Infrastructure.csproj" Id="d70c660a-bdbe-4b64-8e98-f272a6b7bee9" />
   <Project Path="Steam.Shared/Steam.Shared.csproj" />
   <Project Path="Steam.WebApi/Steam.WebApi.csproj" />
 </Solution>
