@@ -8,7 +8,6 @@
 
   <ItemGroup>
     <Folder Include="Database\SqlServer\Context\" />
-    <Folder Include="Database\SqlServer\Entities\" />
     <Folder Include="Exceptions\" />
   </ItemGroup>
 

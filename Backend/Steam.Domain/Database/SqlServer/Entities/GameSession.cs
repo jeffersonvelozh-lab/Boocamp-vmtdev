@@ -17,5 +17,5 @@ public partial class GameSession
 
     public virtual Game? Game { get; set; }
 
-    public virtual Usuario? Usuario { get; set; }
+    public virtual User? Usuario { get; set; }
 }

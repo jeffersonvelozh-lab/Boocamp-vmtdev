@@ -15,6 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Steam.Domain\Steam.Domain.csproj" />
     <ProjectReference Include="..\Steam.Shared\Steam.Shared.csproj" />
   </ItemGroup>
 

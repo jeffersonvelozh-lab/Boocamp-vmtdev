@@ -9,13 +9,13 @@ public partial class ReviewComment
 
     public int? ReviewId { get; set; }
 
-    public int? UsuarioId { get; set; }
+    public int? UserId { get; set; }
 
-    public string Comentario { get; set; } = null!;
+    public string? Comment { get; set; }
 
-    public DateTime? Createdat { get; set; }
+    public DateTime? CreatedAt { get; set; }
 
     public virtual Review? Review { get; set; }
 
-    public virtual Usuario? Usuario { get; set; }
+    public virtual User? User { get; set; }
 }

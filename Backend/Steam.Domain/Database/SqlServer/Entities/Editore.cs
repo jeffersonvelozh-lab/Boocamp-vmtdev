@@ -8,6 +8,4 @@ public partial class Editore
     public int EditorId { get; set; }
 
     public string Name { get; set; } = null!;
-
-    public virtual ICollection<Game> Games { get; set; } = new List<Game>();
 }

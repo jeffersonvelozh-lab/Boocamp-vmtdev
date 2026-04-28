@@ -1,22 +1,61 @@
-﻿using Steam.Domain.Database.SqlServer.Context;
+﻿using Microsoft.EntityFrameworkCore;
+using Steam.Domain.Database.SqlServer.Context;
 using Steam.Domain.Database.SqlServer.Entities;
 using Steam.Domain.Interfaces.Repositories;
 
 namespace Steam.Infrastructure.Persistence.SqlServer.Repositories
 {
-    internal class UserRepository(SteamcloneBdContext context) : IUserRepository
+    public class UserRepository(SteamCloneContext context) : IUserRepository
     {
-        public Task<Usuario> Create(Usuario usuario)
+        public async Task<User> Create(User user)
         {
-            throw new NotImplementedException();
+            try
+            {
+                // insert en la base datos
+                await context.AddAsync(user);
+
+                // commit en la base de datos
+                await context.SaveChangesAsync();
+
+                return user;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
         }
 
-        public Task<Usuario?> Get(Guid usuarioId)
+        public async Task<bool> Delete(User user)
         {
-            throw new NotImplementedException();
+            try
+            {
+                context.Users.Remove(user);
+
+                var deletecount = await context.SaveChangesAsync();
+
+                return deletecount > 0;
+
+            }
+            catch (Exception)
+            {
+                return false;
+            }
         }
 
-        public Task<Usuario?> Get(string email)
+        public async Task<User?> Get(int userId)
+        {
+            try
+            {
+                return await context.Users.FirstOrDefaultAsync(x => x.UserId == userId);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        public Task<User?> Get(string email)
         {
             throw new NotImplementedException();
         }
@@ -26,19 +65,48 @@ namespace Steam.Infrastructure.Persistence.SqlServer.Repositories
             throw new NotImplementedException();
         }
 
-        public Task<bool> IfExiste(Guid usuarioId)
+        public async Task<bool> IfExiste(int userId)
         {
-            throw new NotImplementedException();
+            try
+            {
+                return await context.Users.AnyAsync(x => x.UserId == userId);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
 
-        public IQueryable<Usuario> Queryable()
+        public IQueryable<User> Queryable()
         {
-            throw new NotImplementedException();
+            try
+            {
+
+                return context.Users.AsQueryable();
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
 
-        public Task<Usuario> Update(Usuario usuario)
+        public async Task<User> Update(User user)
         {
-            throw new NotImplementedException();
+            try
+            {
+                context.Users.Update(user);
+                await context.SaveChangesAsync();
+                return user;
+            }
+            catch (Exception)
+            {
+
+                throw;
+
+            }
         }
     }
 }

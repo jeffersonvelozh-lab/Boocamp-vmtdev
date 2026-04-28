@@ -252,7 +252,7 @@ VALUES ('Open World Crime', 'Juego de mundo abierto', 59.99, '2020-05-10', 2);
 GO
 
 -- 7️ User Library (player1 compra juego 1)
-INSERT INTO User_Game (user_id, game_id, playtime_hours)
+INSERT INTO User_Games (user_id, game_id, playtime_hours)
 VALUES (1, 1, 120);
 GO
 

@@ -7,35 +7,31 @@ public partial class Game
 {
     public int GameId { get; set; }
 
-    public string Nombre { get; set; } = null!;
+    public string Title { get; set; } = null!;
 
     public string? Description { get; set; }
 
-    public decimal Precio { get; set; }
+    public decimal? Price { get; set; }
 
-    public DateOnly? FechaCompra { get; set; }
+    public DateTime ReleaseDate { get; set; }
 
-    public int DesarrolladorId { get; set; }
+    public int? DeveloperId { get; set; }
 
-    public int? EditorId { get; set; }
+    public int? PublisherId { get; set; }
 
-    public DateTime? CreatedAt { get; set; }
+    public virtual ICollection<Achievement> Achievements { get; set; } = new List<Achievement>();
 
-    public virtual Desarrolladore Desarrollador { get; set; } = null!;
-
-    public virtual Editore? Editor { get; set; }
+    public virtual Developer? Developer { get; set; }
 
     public virtual ICollection<GameSession> GameSessions { get; set; } = new List<GameSession>();
 
-    public virtual ICollection<Librerium> Libreria { get; set; } = new List<Librerium>();
-
-    public virtual ICollection<Oferta> Oferta { get; set; } = new List<Oferta>();
+    public virtual ICollection<Offer> Offers { get; set; } = new List<Offer>();
 
     public virtual ICollection<Review> Reviews { get; set; } = new List<Review>();
 
-    public virtual ICollection<UsuarioGame> UsuarioGames { get; set; } = new List<UsuarioGame>();
+    public virtual ICollection<UserGame> UserGames { get; set; } = new List<UserGame>();
 
-    public virtual ICollection<Genero> Generos { get; set; } = new List<Genero>();
+    public virtual ICollection<Gener> Geners { get; set; } = new List<Gener>();
 
-    public virtual ICollection<Usuario> Usuarios { get; set; } = new List<Usuario>();
+    public virtual ICollection<User> Users { get; set; } = new List<User>();
 }

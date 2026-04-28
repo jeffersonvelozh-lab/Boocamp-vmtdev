@@ -4,12 +4,12 @@ using Steam.Application.Models.Dtos;
 using Steam.Application.Models.Request;
 using Steam.Application.Models.Request.Users;
 using Steam.Application.Models.Responses;
-using Steam.Shared.Cache;
+using Steam.Domain.Interfaces.Repositories;
 using Steam.Shared.Helpers;
 
 namespace Steam.Application.Services
 {
-    public class UserService(Cache<UserDto> cache) : IUserService
+    public class UserService(IUserRepository repository) : IUserService
 
     {
         public async Task<GenericResponse<UserDto>> Create(CreateUserRequest modl)

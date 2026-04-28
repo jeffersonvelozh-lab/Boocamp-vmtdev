@@ -4,12 +4,13 @@ namespace Steam.Domain.Interfaces.Repositories
 {
     public interface IUserRepository
     {
-        Task<Usuario> Create(Usuario usuario);
-        Task<Usuario> Update(Usuario usuario);
-        Task<Usuario?> Get(Guid usuarioId);
-        Task<Usuario?> Get(String email);
-        Task<bool> IfExiste(Guid usuarioId);
-        IQueryable<Usuario> Queryable();
+        Task<User> Create(User user);
+        Task<bool> Delete(User user);
+        Task<User> Update(User user);
+        Task<User?> Get(int userId);
+        Task<User?> Get(String email);
+        Task<bool> IfExiste(int userId);
+        IQueryable<User> Queryable();
         Task<bool> HasCreated();
     }
 }
