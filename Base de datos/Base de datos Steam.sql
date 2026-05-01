@@ -15,7 +15,7 @@ GO
 -- Tabla: Developers
 -- =========================
 CREATE TABLE Developers (
-    developer_id INT IDENTITY PRIMARY KEY,
+    id UNIQUEIDENTIFIER NOT NULL PRIMARY KEY DEFAULT NEWID(),
     name NVARCHAR(100) NOT NULL,
     country NVARCHAR(100),
     website NVARCHAR(255)
@@ -26,8 +26,8 @@ GO
 -- Tabla: Developers
 -- =========================
 CREATE TABLE Editores (
-    editorID INT IDENTITY(1,1) PRIMARY KEY,
-    Name NVARCHAR(100) NOT NULL
+    id UNIQUEIDENTIFIER NOT NULL PRIMARY KEY DEFAULT NEWID(),
+    name NVARCHAR(100) NOT NULL
 );
 GO
 
@@ -35,13 +35,13 @@ GO
 -- Tabla: Users
 -- =========================
 CREATE TABLE Users (
-    user_id INT IDENTITY PRIMARY KEY,
+    id UNIQUEIDENTIFIER NOT NULL DEFAULT NEWID() PRIMARY KEY,
     username NVARCHAR(50) UNIQUE NOT NULL,
     email NVARCHAR(100) UNIQUE NOT NULL,
-    password_hash NVARCHAR(255) NOT NULL,
+    passwordhash NVARCHAR(255) NOT NULL,
     country NVARCHAR(100),
-    created_at DATETIME2 NOT NULL DEFAULT SYSUTCDATETIME(),
-    last_login DATETIME2 NOT NULL DEFAULT SYSUTCDATETIME()
+    createdat DATETIME2 NOT NULL DEFAULT SYSUTCDATETIME(),
+    lastlogin DATETIME2 NOT NULL DEFAULT SYSUTCDATETIME()
 );
 GO 
 
@@ -49,30 +49,30 @@ GO
 -- Tabla: Games
 -- =========================
 CREATE TABLE Games (
-    game_id INT IDENTITY PRIMARY KEY,
+    id UNIQUEIDENTIFIER NOT NULL PRIMARY KEY DEFAULT NEWID(),
     title NVARCHAR(150) NOT NULL,
     description TEXT,
     price DECIMAL(10,2) DEFAULT 0,
-    release_date DATETIME2 NOT NULL DEFAULT SYSUTCDATETIME(),
-    developer_id INT,
-    publisher_id INT,
+    releasedate DATETIME2 NOT NULL DEFAULT SYSUTCDATETIME(),
+    developerid UNIQUEIDENTIFIER NOT NULL,
+    publisherid INT,
 
-    FOREIGN KEY (developer_id) REFERENCES Developers(developer_id)
+    FOREIGN KEY (developerid) REFERENCES Developers(id)
 );
 GO 
 
 -- =========================
 -- Tabla: Games Sessions
 -- =========================
-CREATE TABLE Game_Sessions (
-    sessionID INT IDENTITY(1,1) PRIMARY KEY,
-    usuarioID INT,
-    gameID INT,
-    start_time DATETIME2,
-    end_time DATETIME2,
+CREATE TABLE GameSessions (
+    id UNIQUEIDENTIFIER NOT NULL PRIMARY KEY DEFAULT NEWID(),
+    usuarioid UNIQUEIDENTIFIER NOT NULL,
+    gameid UNIQUEIDENTIFIER NOT NULL,
+    starttime DATETIME2,
+    endtime DATETIME2,
 
-    FOREIGN KEY (UsuarioID) REFERENCES Users(user_id),
-    FOREIGN KEY (GameID) REFERENCES Games(game_id)
+    FOREIGN KEY (usuarioid) REFERENCES Users(id),
+    FOREIGN KEY (gameid) REFERENCES Games(id)
 );
 GO
 
@@ -80,7 +80,7 @@ GO
 -- Tabla: Geners
 -- =========================
 CREATE TABLE Geners (
-    gener_id INT IDENTITY(1,1) PRIMARY KEY,
+    id UNIQUEIDENTIFIER NOT NULL PRIMARY KEY DEFAULT NEWID(),
     descripcion NVARCHAR(50) NOT NULL
 );
 GO
@@ -90,13 +90,13 @@ GO
 -- Tabla: GenersGames
 -- =========================
 CREATE TABLE GenerGame (
-    game_id INT,
-    gener_id INT,
+    gameid UNIQUEIDENTIFIER NOT NULL,
+    generid UNIQUEIDENTIFIER NOT NULL,
 
-    PRIMARY KEY (game_id, gener_id),
+    PRIMARY KEY (gameid, generid),
 
-    FOREIGN KEY (game_id) REFERENCES Games(game_id),
-    FOREIGN KEY (gener_id) REFERENCES Geners(gener_id)
+    FOREIGN KEY (gameid) REFERENCES Games(id),
+    FOREIGN KEY (generid) REFERENCES Geners(id)
 );
 GO
 
@@ -104,16 +104,16 @@ GO
 -- =========================
 -- Tabla: User_Games 
 -- =========================
-CREATE TABLE User_Games(
-    user_id INT,
-    game_id INT,
-    purchase_date DATETIME2 NOT NULL DEFAULT SYSUTCDATETIME(),
-    playtime_hours INT DEFAULT 0,
+CREATE TABLE UserGames(
+    userid UNIQUEIDENTIFIER NOT NULL,
+    gameid UNIQUEIDENTIFIER NOT NULL,
+    purchasedate DATETIME2 NOT NULL DEFAULT SYSUTCDATETIME(),
+    playtimehours INT DEFAULT 0,
 
-	PRIMARY KEY (user_id, game_id),
+	PRIMARY KEY (userid, gameid),
 
-    FOREIGN KEY (user_id) REFERENCES Users(user_id),
-    FOREIGN KEY (game_id) REFERENCES Games(game_id)
+    FOREIGN KEY (userid) REFERENCES Users(id),
+    FOREIGN KEY (gameid) REFERENCES Games(id)
 );
 GO 
 
@@ -121,15 +121,15 @@ GO
 -- Tabla: Friends
 -- =========================
 CREATE TABLE Friends (
-    user_id INT,
-    friend_id INT,
+    userid UNIQUEIDENTIFIER NOT NULL,
+    friendid UNIQUEIDENTIFIER NOT NULL,
     status NVARCHAR(20),
-    created_at DATETIME2 NOT NULL DEFAULT SYSUTCDATETIME(),
+    createdat DATETIME2 NOT NULL DEFAULT SYSUTCDATETIME(),
 
-    PRIMARY KEY (user_id, friend_id),
+    PRIMARY KEY (userid, friendid),
 
-    FOREIGN KEY (user_id) REFERENCES Users(user_id),
-    FOREIGN KEY (friend_id) REFERENCES Users(user_id)
+    FOREIGN KEY (userid) REFERENCES Users(id),
+    FOREIGN KEY (friendid) REFERENCES Users(id)
 );
 GO 
 
@@ -137,27 +137,27 @@ GO
 -- Tabla: Achievements
 -- =========================
 CREATE TABLE Achievements (
-    achievement_id INT IDENTITY PRIMARY KEY,
-    game_id INT,
+    id UNIQUEIDENTIFIER NOT NULL DEFAULT NEWID() PRIMARY KEY,
+    gameid UNIQUEIDENTIFIER NOT NULL,
     title NVARCHAR(150),
     description TEXT,
 
-    FOREIGN KEY (game_id) REFERENCES Games(game_id)
+    FOREIGN KEY (gameid) REFERENCES Games(id)
 );
 GO 
 
 -- =========================
 -- Tabla: User Achievements
 -- =========================
-CREATE TABLE User_Achievements (
-    user_id INT,
-    achievement_id INT,
-    unlocked_at DATETIME2 NOT NULL DEFAULT SYSUTCDATETIME(),
+CREATE TABLE UserAchievements (
+    userid UNIQUEIDENTIFIER NOT NULL,
+    achievementid UNIQUEIDENTIFIER NOT NULL,
+    unlockedat DATETIME2 NOT NULL DEFAULT SYSUTCDATETIME(),
 
-    PRIMARY KEY (user_id, achievement_id),
+    PRIMARY KEY (userid, achievementid),
 
-    FOREIGN KEY (user_id) REFERENCES Users(user_id),
-    FOREIGN KEY (achievement_id) REFERENCES Achievements(achievement_id)
+    FOREIGN KEY (userid) REFERENCES Users(id),
+    FOREIGN KEY (achievementid) REFERENCES Achievements(id)
 );
 GO 
 
@@ -165,32 +165,32 @@ GO
 -- Tabla: Reviews
 -- =========================
 CREATE TABLE Reviews (
-    review_id INT IDENTITY PRIMARY KEY,
-    user_id INT,
-    game_id INT,
+    id UNIQUEIDENTIFIER NOT NULL DEFAULT NEWID() PRIMARY KEY,
+    userid UNIQUEIDENTIFIER NOT NULL,
+    gameid UNIQUEIDENTIFIER NOT NULL,
     rating INT CHECK (rating BETWEEN 1 AND 5),
     comment TEXT,
-    created_at DATETIME2 NOT NULL DEFAULT SYSUTCDATETIME(),
+    createdat DATETIME2 NOT NULL DEFAULT SYSUTCDATETIME(),
 
-	CONSTRAINT UQ_User_Game UNIQUE (user_id, game_id),
+	CONSTRAINT UQ_User_Game UNIQUE (userid, gameid),
 
-    FOREIGN KEY (user_id) REFERENCES Users(user_id),
-    FOREIGN KEY (game_id) REFERENCES Games(game_id)
+    FOREIGN KEY (userid) REFERENCES Users(id),
+    FOREIGN KEY (gameid) REFERENCES Games(id)
 );
 GO 
 
 -- =========================================
 -- Tabla: Review_Comments
 -- =========================================
-CREATE TABLE Review_Comments (
-    comment_id INT IDENTITY(1,1) PRIMARY KEY,
-    review_id INT,
-    user_id INT,
+CREATE TABLE ReviewComments (
+    id INT IDENTITY(1,1) PRIMARY KEY,
+    reviewid UNIQUEIDENTIFIER NOT NULL,
+    userid UNIQUEIDENTIFIER NOT NULL,
     comment TEXT,
-    created_at DATETIME2 DEFAULT SYSDATETIME(),
+    createdat DATETIME2 DEFAULT SYSDATETIME(),
 
-    FOREIGN KEY (review_id) REFERENCES Reviews(review_id),
-    FOREIGN KEY (user_id) REFERENCES Users(user_id)
+    FOREIGN KEY (reviewid) REFERENCES Reviews(id),
+    FOREIGN KEY (userid) REFERENCES Users(id)
 );
 GO
 
@@ -199,13 +199,13 @@ GO
 -- WISHLIST
 -- =========================================
 CREATE TABLE Wishlist (
-    user_id INT,
-    game_id INT,
+    userid UNIQUEIDENTIFIER NOT NULL,
+    gameid UNIQUEIDENTIFIER NOT NULL,
 
-    PRIMARY KEY (user_id, game_id),
+    PRIMARY KEY (userid, gameid),
 
-    FOREIGN KEY (user_id) REFERENCES Users(user_id),
-    FOREIGN KEY (game_id) REFERENCES Games(game_id)
+    FOREIGN KEY (userid) REFERENCES Users(id),
+    FOREIGN KEY (gameid) REFERENCES Games(id)
 );
 GO
 
@@ -213,13 +213,13 @@ GO
 -- OFFERS
 -- =========================================
 CREATE TABLE Offers (
-    offer_id INT IDENTITY(1,1) PRIMARY KEY,
-    game_id INT,
-    discount_pct DECIMAL(5,2),
-    start_date DATETIME2,
-    end_date DATETIME2,
+    offerid INT IDENTITY(1,1) PRIMARY KEY,
+    gameid UNIQUEIDENTIFIER NOT NULL,
+    discountpct DECIMAL(5,2),
+    startdate DATETIME2,
+    enddate DATETIME2,
 
-    FOREIGN KEY (game_id) REFERENCES Games(game_id)
+    FOREIGN KEY (gameid) REFERENCES Games(id)
 );
 GO
 
@@ -228,45 +228,51 @@ GO
 -- =========================
 
 -- 1️ Developers
-INSERT INTO Developers (name, country, website)
-VALUES ('Valve', 'USA', 'https://www.valvesoftware.com');
+DECLARE @PRIMERDEVELOPER UNIQUEIDENTIFIER = NEWID();
+INSERT INTO Developers (id, name, country, website)
+VALUES (@PRIMERDEVELOPER,'Valve', 'USA', 'https://www.valvesoftware.com');
 -- 2️ Otro Developer
-INSERT INTO Developers (name, country, website)
-VALUES ('Rockstar Games', 'USA', 'https://www.rockstargames.com');
-GO 
+DECLARE @SEGUNDODEVELOPER UNIQUEIDENTIFIER = NEWID();
+INSERT INTO Developers (id, name, country, website)
+VALUES (@SEGUNDODEVELOPER, 'Rockstar Games', 'USA', 'https://www.rockstargames.com');
 
--- 3️ Users
-INSERT INTO Users (username, email, password_hash, country)
-VALUES ('player1', 'player1@email.com', 'hash123', 'Ecuador');
--- 4️ Otro User
-INSERT INTO Users (username, email, password_hash, country)
-VALUES ('player2', 'player2@email.com', 'hash456', 'Colombia');
-GO
 
 -- 5️ Game
-INSERT INTO Games (title, description, price, release_date, developer_id)
-VALUES ('Counter Strike Clone', 'Shooter competitivo', 0.00, '2023-09-01', 1);
+DECLARE @PRIMERGAME UNIQUEIDENTIFIER = NEWID();
+INSERT INTO Games (id,title, description, price, releasedate, developerid)
+VALUES (@PRIMERGAME,'Counter Strike Clone', 'Shooter competitivo', 0.00, '2023-09-01', @PRIMERDEVELOPER);
 -- 6️ Otro Game
-INSERT INTO Games (title, description, price, release_date, developer_id)
-VALUES ('Open World Crime', 'Juego de mundo abierto', 59.99, '2020-05-10', 2);
-GO
+DECLARE @SEGUNDOGAME UNIQUEIDENTIFIER = NEWID();
+INSERT INTO Games (id, title, description, price, releasedate, developerid)
+VALUES (@SEGUNDOGAME, 'Open World Crime', 'Juego de mundo abierto', 59.99, '2020-05-10', @SEGUNDODEVELOPER);
 
--- 7️ User Library (player1 compra juego 1)
-INSERT INTO User_Games (user_id, game_id, playtime_hours)
-VALUES (1, 1, 120);
-GO
+
+-- 3️ Users
+DECLARE @PRIMERUSER UNIQUEIDENTIFIER = NEWID();
+INSERT INTO Users (id, username, email, passwordhash, country)
+VALUES (@PRIMERUSER, 'player1', 'player1@email.com', 'hash123', 'Ecuador');
+-- 4️ Otro User
+DECLARE @SEGUNDOUSER UNIQUEIDENTIFIER = NEWID();
+INSERT INTO Users (id, username, email, passwordhash, country)
+VALUES (@SEGUNDOUSER, 'player2', 'player2@email.com', 'hash456', 'Colombia');
+
+
+-- 7️ User Games (player1 compra juego 1)
+INSERT INTO UserGames (userid, gameid, playtimehours)
+VALUES (@PRIMERUSER, @PRIMERGAME, 120);
+
 
 -- 8️ Friends
-INSERT INTO Friends (user_id, friend_id, status)
-VALUES (1, 2, 'accepted');
-GO
+INSERT INTO Friends (userid, friendid, status)
+VALUES (@PRIMERUSER, @SEGUNDOUSER, 'accepted');
+
 
 -- 9️ Achievement
-INSERT INTO Achievements (game_id, title, description)
-VALUES (1, 'First Win', 'Ganar tu primera partida');
-GO
+INSERT INTO Achievements (gameid, title, description)
+VALUES (@PRIMERGAME, 'First Win', 'Ganar tu primera partida');
+
 
 -- 10 Review
-INSERT INTO Reviews (user_id, game_id, rating, comment)
-VALUES (1, 1, 5, 'Excelente juego!');
+INSERT INTO Reviews (userid, gameid, rating, comment)
+VALUES (@PRIMERUSER, @PRIMERGAME, 5, 'Excelente juego!');
 GO
