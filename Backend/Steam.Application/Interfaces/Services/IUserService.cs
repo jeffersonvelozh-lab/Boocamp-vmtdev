@@ -8,10 +8,10 @@ namespace Steam.Application.Interfaces.Services
     public interface IUserService
     {
         public Task<GenericResponse<UserDto>> Create(CreateUserRequest modl);
-        public Task<GenericResponse<UserDto>> Update(Guid UserId, UpdateUserRequest modl);
-        public Task<GenericResponse<UserDto?>> Get(Guid UserId);
+        public Task<GenericResponse<UserDto>> Update(int UserId, UpdateUserRequest modl);
+        public Task<GenericResponse<UserDto?>> Get(int UserId);
         public GenericResponse<List<UserDto>> Get(FilterUserRequest model);
-        public Task<GenericResponse<bool>> Delete(Guid UserId);
+        public Task<GenericResponse<bool>> Delete(int UserId);
         public Task CreateFirstUser();
 
     }

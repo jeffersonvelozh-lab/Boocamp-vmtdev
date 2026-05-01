@@ -4,8 +4,8 @@ using Steam.Application.Models.Dtos;
 using Steam.Application.Models.Request;
 using Steam.Application.Models.Request.Users;
 using Steam.Application.Models.Responses;
+using Steam.Domain.Database.SqlServer.Entities;
 using Steam.Domain.Interfaces.Repositories;
-using Steam.Shared.Helpers;
 
 namespace Steam.Application.Services
 {
@@ -14,20 +14,16 @@ namespace Steam.Application.Services
     {
         public async Task<GenericResponse<UserDto>> Create(CreateUserRequest modl)
         {
-            var User = new UserDto()
+            var create = await repository.Create(new User
             {
-                UserId = Guid.NewGuid(),
-                UserName = modl.Nombre,
-                Correo = modl.Correo,
-                Password = modl.Password,
-                Country = modl.Pais,
-                LoginDate = DataTimeHelpers.UtcNow(),
-                LastLogin = DataTimeHelpers.UtcNow(),
-            };
+                Username = modl.Nombre,
+                Email = modl.Correo,
+                PasswordHash = modl.Password,
+                Country = modl.Pais
 
-            cache.Add(User.UserId.ToString(), User);
+            });
 
-            return PesponseHelper.Create(User);
+            return PesponseHelper.Create(Map(create));
         }
 
         public Task CreateFirstUser()
@@ -35,23 +31,19 @@ namespace Steam.Application.Services
             throw new NotImplementedException();
         }
 
-        public async Task<GenericResponse<bool>> Delete(Guid UserId)
+        public async Task<GenericResponse<bool>> Delete(int UserId)
         {
-            var Existe = cache.Get(UserId.ToString());
+            var findUser = await repository.Get(UserId)
+                ?? throw new Exception("El usuario no existe");
 
-            if (Existe is null)
-            {
-                return PesponseHelper.Create(false);
-            }
+            var delete = await repository.Delete(findUser);
 
-            cache.Delete(UserId.ToString());
-            return PesponseHelper.Create(true);
+            return PesponseHelper.Create(delete);
         }
 
-        public async Task<GenericResponse<UserDto?>> Get(Guid UserId)
+        public async Task<GenericResponse<UserDto?>> Get(int UserId)
         {
-            var usuario = cache.Get(UserId.ToString());
-            return PesponseHelper.Create(usuario);
+            throw new NotImplementedException();
         }
 
         public GenericResponse<List<UserDto>> Get(FilterUserRequest model)
@@ -59,9 +51,24 @@ namespace Steam.Application.Services
             throw new NotImplementedException();
         }
 
-        public Task<GenericResponse<UserDto>> Update(Guid UserId, UpdateUserRequest modl)
+        public Task<GenericResponse<UserDto>> Update(int UserId, UpdateUserRequest modl)
         {
             throw new NotImplementedException();
+        }
+
+        private static UserDto Map(User user)
+        {
+            return new UserDto
+            {
+                UserId = user.UserId,
+                UserName = user.Username,
+                Correo = user.Email,
+                Password = user.PasswordHash,
+                Country = user.Country,
+                CreateAt = user.CreatedAt,
+                LastLogin = user.LastLogin
+
+            };
         }
     }
 }

@@ -1,29 +1,19 @@
-using Steam.Application.Interfaces.Services;
-using Steam.Application.Models.Dtos;
-using Steam.Application.Services;
-using Steam.Domain.Database.SqlServer.Context;
-using Steam.Domain.Interfaces.Repositories;
-using Steam.Infrastructure.Persistence.SqlServer.Repositories;
-using Steam.Shared.Cache;
+using Steam.WebApi.Extensions;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
 
-builder.Services.AddControllers();
-// Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
-//builder.Services.AddOpenApi();
+builder.Services.AddCore(builder.Configuration);
 
-builder.Services.AddScoped<IUserService, UserService>();
-builder.Services.AddSingleton<Cache<UserDto>>();
 
-//DataBase
-builder.Services.AddSqlServer<SteamCloneContext>(builder.Configuration.GetConnectionString("Database"));
-
-//Database /Repositories
-builder.Services.AddTransient<IUserRepository, UserRepository>();
 
 var app = builder.Build();
+
+if (app.Environment.IsDevelopment())
+{
+    app.MapOpenApi();
+}
 
 //app.UseHttpsRedirection();
 
