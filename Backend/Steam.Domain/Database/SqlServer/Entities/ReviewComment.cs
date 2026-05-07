@@ -5,17 +5,17 @@ namespace Steam.Domain.Database.SqlServer.Entities;
 
 public partial class ReviewComment
 {
-    public int CommentId { get; set; }
+    public int Id { get; set; }
 
-    public int? ReviewId { get; set; }
+    public Guid Reviewid { get; set; }
 
-    public int? UserId { get; set; }
+    public Guid Userid { get; set; }
 
     public string? Comment { get; set; }
 
-    public DateTime? CreatedAt { get; set; }
+    public DateTime? Createdat { get; set; }
 
-    public virtual Review? Review { get; set; }
+    public virtual Review Review { get; set; } = null!;
 
-    public virtual User? User { get; set; }
+    public virtual User User { get; set; } = null!;
 }

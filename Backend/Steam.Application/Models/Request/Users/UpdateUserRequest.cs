@@ -7,19 +7,19 @@ namespace Steam.Application.Models.Request
     {
         [MaxLength(150, ErrorMessage = ValidatioConstans.MAX_LENGTH)]
         [MinLength(2, ErrorMessage = ValidatioConstans.MIN_LENGTH)]
-        public string Nombre { get; set; }
+        public string? Nombre { get; set; }
 
         [MaxLength(150, ErrorMessage = ValidatioConstans.MAX_LENGTH)]
         [MinLength(2, ErrorMessage = ValidatioConstans.MIN_LENGTH)]
-        public string Correo { get; set; }
+        public string? Correo { get; set; }
 
         [MaxLength(150, ErrorMessage = ValidatioConstans.MAX_LENGTH)]
         [MinLength(2, ErrorMessage = ValidatioConstans.MIN_LENGTH)]
-        public string Password { get; set; }
+        public string? Password { get; set; }
 
         [MaxLength(150, ErrorMessage = ValidatioConstans.MAX_LENGTH)]
         [MinLength(2, ErrorMessage = ValidatioConstans.MIN_LENGTH)]
 
-        public string Pais { get; set; }
+        public string? Pais { get; set; }
     }
 }

@@ -5,7 +5,7 @@ namespace Steam.Domain.Database.SqlServer.Entities;
 
 public partial class Game
 {
-    public int GameId { get; set; }
+    public Guid Id { get; set; }
 
     public string Title { get; set; } = null!;
 
@@ -13,15 +13,15 @@ public partial class Game
 
     public decimal? Price { get; set; }
 
-    public DateTime ReleaseDate { get; set; }
+    public DateTime Releasedate { get; set; }
 
-    public int? DeveloperId { get; set; }
+    public Guid Developerid { get; set; }
 
-    public int? PublisherId { get; set; }
+    public int? Publisherid { get; set; }
 
     public virtual ICollection<Achievement> Achievements { get; set; } = new List<Achievement>();
 
-    public virtual Developer? Developer { get; set; }
+    public virtual Developer Developer { get; set; } = null!;
 
     public virtual ICollection<GameSession> GameSessions { get; set; } = new List<GameSession>();
 

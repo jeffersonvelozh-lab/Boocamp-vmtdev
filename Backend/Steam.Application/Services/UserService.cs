@@ -6,6 +6,7 @@ using Steam.Application.Models.Request.Users;
 using Steam.Application.Models.Responses;
 using Steam.Domain.Database.SqlServer.Entities;
 using Steam.Domain.Interfaces.Repositories;
+using Steam.Shared.Constans;
 
 namespace Steam.Application.Services
 {
@@ -18,7 +19,7 @@ namespace Steam.Application.Services
             {
                 Username = modl.Nombre,
                 Email = modl.Correo,
-                PasswordHash = modl.Password,
+                Passwordhash = modl.Password,
                 Country = modl.Pais
 
             });
@@ -31,42 +32,82 @@ namespace Steam.Application.Services
             throw new NotImplementedException();
         }
 
-        public async Task<GenericResponse<bool>> Delete(int UserId)
+        public async Task<GenericResponse<bool>> Delete(Guid UserId)
         {
-            var findUser = await repository.Get(UserId)
-                ?? throw new Exception("El usuario no existe");
+            var user = await GetUser(UserId);
 
-            var delete = await repository.Delete(findUser);
+            var delete = await repository.Delete(user);
 
             return PesponseHelper.Create(delete);
         }
 
-        public async Task<GenericResponse<UserDto?>> Get(int UserId)
+        public async Task<GenericResponse<UserDto>> Get(Guid UserId)
         {
-            throw new NotImplementedException();
+            var user = await GetUser(UserId);
+            return PesponseHelper.Create(Map(user));
         }
 
         public GenericResponse<List<UserDto>> Get(FilterUserRequest model)
         {
-            throw new NotImplementedException();
+            var querable = repository.Queryable();
+
+            if (string.IsNullOrWhiteSpace(model.Nombre))
+            {
+                querable = querable.Where(x => x.Username.Contains(model.Nombre ?? ""));
+            }
+            if (string.IsNullOrWhiteSpace(model.Correo))
+            {
+                querable = querable.Where(x => x.Email.Contains(model.Correo ?? ""));
+            }
+            if (string.IsNullOrWhiteSpace(model.Pais))
+            {
+                querable = querable.Where(x => x.Country != null && x.Country.Contains(model.Pais ?? ""));
+            }
+
+            var users = querable.Take(model.Limit).Skip(model.Offset).ToList();
+
+            List<UserDto> mapped = [];
+            foreach (var user in users)
+            {
+                mapped.Add(Map(user));
+            }
+
+            return PesponseHelper.Create(mapped);
         }
 
-        public Task<GenericResponse<UserDto>> Update(int UserId, UpdateUserRequest modl)
+        public async Task<GenericResponse<UserDto>> Update(Guid UserId, UpdateUserRequest modl)
         {
-            throw new NotImplementedException();
+            var user = await GetUser(UserId);
+
+            user.Username = modl.Nombre ?? user.Username;
+            user.Email = modl.Correo ?? user.Email;
+            user.Passwordhash = modl.Password ?? user.Passwordhash;
+            user.Country = modl.Pais ?? user.Country;
+
+            var update = await repository.Update(user);
+
+            return PesponseHelper.Create(Map(update));
+        }
+
+
+        //Método que sirve para validar si el usuario existe
+        private async Task<User> GetUser(Guid userId)
+        {
+            return await repository.Get(userId)
+                ?? throw new Exception(ResponseConstans.USER_NOT_EXISTS);
         }
 
         private static UserDto Map(User user)
         {
             return new UserDto
             {
-                UserId = user.UserId,
+                UserId = user.Id,
                 UserName = user.Username,
                 Correo = user.Email,
-                Password = user.PasswordHash,
+                Password = user.Passwordhash,
                 Country = user.Country,
-                CreateAt = user.CreatedAt,
-                LastLogin = user.LastLogin
+                CreateAt = user.Createdat,
+                LastLogin = user.Lastlogin
 
             };
         }

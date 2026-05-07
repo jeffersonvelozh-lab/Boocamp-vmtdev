@@ -1,20 +1,23 @@
-﻿namespace Steam.Domain.Database.SqlServer.Entities;
+﻿using System;
+using System.Collections.Generic;
+
+namespace Steam.Domain.Database.SqlServer.Entities;
 
 public partial class User
 {
-    public int UserId { get; set; }
+    public Guid Id { get; set; }
 
     public string Username { get; set; } = null!;
 
     public string Email { get; set; } = null!;
 
-    public string PasswordHash { get; set; } = null!;
+    public string Passwordhash { get; set; } = null!;
 
     public string? Country { get; set; }
 
-    public DateTime CreatedAt { get; set; }
+    public DateTime Createdat { get; set; }
 
-    public DateTime LastLogin { get; set; }
+    public DateTime Lastlogin { get; set; }
 
     public virtual ICollection<Friend> FriendFriendNavigations { get; set; } = new List<Friend>();
 

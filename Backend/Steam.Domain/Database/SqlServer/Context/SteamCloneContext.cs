@@ -50,27 +50,32 @@ public partial class SteamCloneContext : DbContext
     {
         modelBuilder.Entity<Achievement>(entity =>
         {
-            entity.HasKey(e => e.AchievementId).HasName("PK__Achievem__3C492E83A0389CC3");
+            entity.HasKey(e => e.Id).HasName("PK__Achievem__3213E83F8D8B2CE5");
 
-            entity.Property(e => e.AchievementId).HasColumnName("achievement_id");
+            entity.Property(e => e.Id)
+                .HasDefaultValueSql("(newid())")
+                .HasColumnName("id");
             entity.Property(e => e.Description)
                 .HasColumnType("text")
                 .HasColumnName("description");
-            entity.Property(e => e.GameId).HasColumnName("game_id");
+            entity.Property(e => e.Gameid).HasColumnName("gameid");
             entity.Property(e => e.Title)
                 .HasMaxLength(150)
                 .HasColumnName("title");
 
             entity.HasOne(d => d.Game).WithMany(p => p.Achievements)
-                .HasForeignKey(d => d.GameId)
-                .HasConstraintName("FK__Achieveme__game___59FA5E80");
+                .HasForeignKey(d => d.Gameid)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK__Achieveme__gamei__72C60C4A");
         });
 
         modelBuilder.Entity<Developer>(entity =>
         {
-            entity.HasKey(e => e.DeveloperId).HasName("PK__Develope__F4FA438008FEE8F1");
+            entity.HasKey(e => e.Id).HasName("PK__Develope__3213E83F1252D70E");
 
-            entity.Property(e => e.DeveloperId).HasColumnName("developer_id");
+            entity.Property(e => e.Id)
+                .HasDefaultValueSql("(newid())")
+                .HasColumnName("id");
             entity.Property(e => e.Country)
                 .HasMaxLength(100)
                 .HasColumnName("country");
@@ -84,107 +89,118 @@ public partial class SteamCloneContext : DbContext
 
         modelBuilder.Entity<Editore>(entity =>
         {
-            entity.HasKey(e => e.EditorId).HasName("PK__Editores__582CA82C4F2C2231");
+            entity.HasKey(e => e.Id).HasName("PK__Editores__3213E83F3B78583C");
 
-            entity.Property(e => e.EditorId).HasColumnName("editorID");
-            entity.Property(e => e.Name).HasMaxLength(100);
+            entity.Property(e => e.Id)
+                .HasDefaultValueSql("(newid())")
+                .HasColumnName("id");
+            entity.Property(e => e.Name)
+                .HasMaxLength(100)
+                .HasColumnName("name");
         });
 
         modelBuilder.Entity<Friend>(entity =>
         {
-            entity.HasKey(e => new { e.UserId, e.FriendId }).HasName("PK__Friends__FA44291AA90B0799");
+            entity.HasKey(e => new { e.Userid, e.Friendid }).HasName("PK__Friends__2D047465C7ADA9AE");
 
-            entity.Property(e => e.UserId).HasColumnName("user_id");
-            entity.Property(e => e.FriendId).HasColumnName("friend_id");
-            entity.Property(e => e.CreatedAt)
+            entity.Property(e => e.Userid).HasColumnName("userid");
+            entity.Property(e => e.Friendid).HasColumnName("friendid");
+            entity.Property(e => e.Createdat)
                 .HasDefaultValueSql("(sysutcdatetime())")
-                .HasColumnName("created_at");
+                .HasColumnName("createdat");
             entity.Property(e => e.Status)
                 .HasMaxLength(20)
                 .HasColumnName("status");
 
             entity.HasOne(d => d.FriendNavigation).WithMany(p => p.FriendFriendNavigations)
-                .HasForeignKey(d => d.FriendId)
+                .HasForeignKey(d => d.Friendid)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__Friends__friend___571DF1D5");
+                .HasConstraintName("FK__Friends__friendi__6EF57B66");
 
             entity.HasOne(d => d.User).WithMany(p => p.FriendUsers)
-                .HasForeignKey(d => d.UserId)
+                .HasForeignKey(d => d.Userid)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__Friends__user_id__5629CD9C");
+                .HasConstraintName("FK__Friends__userid__6E01572D");
         });
 
         modelBuilder.Entity<Game>(entity =>
         {
-            entity.HasKey(e => e.GameId).HasName("PK__Games__FFE11FCF74E463C0");
+            entity.HasKey(e => e.Id).HasName("PK__Games__3213E83FF2B8CD28");
 
-            entity.Property(e => e.GameId).HasColumnName("game_id");
+            entity.Property(e => e.Id)
+                .HasDefaultValueSql("(newid())")
+                .HasColumnName("id");
             entity.Property(e => e.Description)
                 .HasColumnType("text")
                 .HasColumnName("description");
-            entity.Property(e => e.DeveloperId).HasColumnName("developer_id");
+            entity.Property(e => e.Developerid).HasColumnName("developerid");
             entity.Property(e => e.Price)
                 .HasDefaultValue(0m)
                 .HasColumnType("decimal(10, 2)")
                 .HasColumnName("price");
-            entity.Property(e => e.PublisherId).HasColumnName("publisher_id");
-            entity.Property(e => e.ReleaseDate)
+            entity.Property(e => e.Publisherid).HasColumnName("publisherid");
+            entity.Property(e => e.Releasedate)
                 .HasDefaultValueSql("(sysutcdatetime())")
-                .HasColumnName("release_date");
+                .HasColumnName("releasedate");
             entity.Property(e => e.Title)
                 .HasMaxLength(150)
                 .HasColumnName("title");
 
             entity.HasOne(d => d.Developer).WithMany(p => p.Games)
-                .HasForeignKey(d => d.DeveloperId)
-                .HasConstraintName("FK__Games__developer__4316F928");
+                .HasForeignKey(d => d.Developerid)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK__Games__developer__59063A47");
 
             entity.HasMany(d => d.Geners).WithMany(p => p.Games)
                 .UsingEntity<Dictionary<string, object>>(
                     "GenerGame",
                     r => r.HasOne<Gener>().WithMany()
-                        .HasForeignKey("GenerId")
+                        .HasForeignKey("Generid")
                         .OnDelete(DeleteBehavior.ClientSetNull)
-                        .HasConstraintName("FK__GenerGame__gener__4CA06362"),
+                        .HasConstraintName("FK__GenerGame__gener__6477ECF3"),
                     l => l.HasOne<Game>().WithMany()
-                        .HasForeignKey("GameId")
+                        .HasForeignKey("Gameid")
                         .OnDelete(DeleteBehavior.ClientSetNull)
-                        .HasConstraintName("FK__GenerGame__game___4BAC3F29"),
+                        .HasConstraintName("FK__GenerGame__gamei__6383C8BA"),
                     j =>
                     {
-                        j.HasKey("GameId", "GenerId").HasName("PK__GenerGam__CC043CF522295BE7");
+                        j.HasKey("Gameid", "Generid").HasName("PK__GenerGam__A2F01EDBCDA914F4");
                         j.ToTable("GenerGame");
-                        j.IndexerProperty<int>("GameId").HasColumnName("game_id");
-                        j.IndexerProperty<int>("GenerId").HasColumnName("gener_id");
+                        j.IndexerProperty<Guid>("Gameid").HasColumnName("gameid");
+                        j.IndexerProperty<Guid>("Generid").HasColumnName("generid");
                     });
         });
 
         modelBuilder.Entity<GameSession>(entity =>
         {
-            entity.HasKey(e => e.SessionId).HasName("PK__Game_Ses__23DB12CBDFCCA34D");
+            entity.HasKey(e => e.Id).HasName("PK__GameSess__3213E83FAE5057AC");
 
-            entity.ToTable("Game_Sessions");
-
-            entity.Property(e => e.SessionId).HasColumnName("sessionID");
-            entity.Property(e => e.EndTime).HasColumnName("end_time");
-            entity.Property(e => e.GameId).HasColumnName("gameID");
-            entity.Property(e => e.StartTime).HasColumnName("start_time");
-            entity.Property(e => e.UsuarioId).HasColumnName("usuarioID");
+            entity.Property(e => e.Id)
+                .HasDefaultValueSql("(newid())")
+                .HasColumnName("id");
+            entity.Property(e => e.Endtime).HasColumnName("endtime");
+            entity.Property(e => e.Gameid).HasColumnName("gameid");
+            entity.Property(e => e.Starttime).HasColumnName("starttime");
+            entity.Property(e => e.Usuarioid).HasColumnName("usuarioid");
 
             entity.HasOne(d => d.Game).WithMany(p => p.GameSessions)
-                .HasForeignKey(d => d.GameId)
-                .HasConstraintName("FK__Game_Sess__gameI__46E78A0C");
+                .HasForeignKey(d => d.Gameid)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK__GameSessi__gamei__5DCAEF64");
 
             entity.HasOne(d => d.Usuario).WithMany(p => p.GameSessions)
-                .HasForeignKey(d => d.UsuarioId)
-                .HasConstraintName("FK__Game_Sess__usuar__45F365D3");
+                .HasForeignKey(d => d.Usuarioid)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK__GameSessi__usuar__5CD6CB2B");
         });
 
         modelBuilder.Entity<Gener>(entity =>
         {
-            entity.HasKey(e => e.GenerId).HasName("PK__Geners__3E5233A2BB56092E");
+            entity.HasKey(e => e.Id).HasName("PK__Geners__3213E83F1CF00DD9");
 
-            entity.Property(e => e.GenerId).HasColumnName("gener_id");
+            entity.Property(e => e.Id)
+                .HasDefaultValueSql("(newid())")
+                .HasColumnName("id");
             entity.Property(e => e.Descripcion)
                 .HasMaxLength(50)
                 .HasColumnName("descripcion");
@@ -192,96 +208,103 @@ public partial class SteamCloneContext : DbContext
 
         modelBuilder.Entity<Offer>(entity =>
         {
-            entity.HasKey(e => e.OfferId).HasName("PK__Offers__03D37AC252C7F98F");
+            entity.HasKey(e => e.Offerid).HasName("PK__Offers__58871E98E362498C");
 
-            entity.Property(e => e.OfferId).HasColumnName("offer_id");
-            entity.Property(e => e.DiscountPct)
+            entity.Property(e => e.Offerid).HasColumnName("offerid");
+            entity.Property(e => e.Discountpct)
                 .HasColumnType("decimal(5, 2)")
-                .HasColumnName("discount_pct");
-            entity.Property(e => e.EndDate).HasColumnName("end_date");
-            entity.Property(e => e.GameId).HasColumnName("game_id");
-            entity.Property(e => e.StartDate).HasColumnName("start_date");
+                .HasColumnName("discountpct");
+            entity.Property(e => e.Enddate).HasColumnName("enddate");
+            entity.Property(e => e.Gameid).HasColumnName("gameid");
+            entity.Property(e => e.Startdate).HasColumnName("startdate");
 
             entity.HasOne(d => d.Game).WithMany(p => p.Offers)
-                .HasForeignKey(d => d.GameId)
-                .HasConstraintName("FK__Offers__game_id__70DDC3D8");
+                .HasForeignKey(d => d.Gameid)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK__Offers__gameid__0A9D95DB");
         });
 
         modelBuilder.Entity<Review>(entity =>
         {
-            entity.HasKey(e => e.ReviewId).HasName("PK__Reviews__60883D9072DCA24E");
+            entity.HasKey(e => e.Id).HasName("PK__Reviews__3213E83FEBE36B09");
 
-            entity.HasIndex(e => new { e.UserId, e.GameId }, "UQ_User_Game").IsUnique();
+            entity.HasIndex(e => new { e.Userid, e.Gameid }, "UQ_User_Game").IsUnique();
 
-            entity.Property(e => e.ReviewId).HasColumnName("review_id");
+            entity.Property(e => e.Id)
+                .HasDefaultValueSql("(newid())")
+                .HasColumnName("id");
             entity.Property(e => e.Comment)
                 .HasColumnType("text")
                 .HasColumnName("comment");
-            entity.Property(e => e.CreatedAt)
+            entity.Property(e => e.Createdat)
                 .HasDefaultValueSql("(sysutcdatetime())")
-                .HasColumnName("created_at");
-            entity.Property(e => e.GameId).HasColumnName("game_id");
+                .HasColumnName("createdat");
+            entity.Property(e => e.Gameid).HasColumnName("gameid");
             entity.Property(e => e.Rating).HasColumnName("rating");
-            entity.Property(e => e.UserId).HasColumnName("user_id");
+            entity.Property(e => e.Userid).HasColumnName("userid");
 
             entity.HasOne(d => d.Game).WithMany(p => p.Reviews)
-                .HasForeignKey(d => d.GameId)
-                .HasConstraintName("FK__Reviews__game_id__656C112C");
+                .HasForeignKey(d => d.Gameid)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK__Reviews__gameid__7F2BE32F");
 
             entity.HasOne(d => d.User).WithMany(p => p.Reviews)
-                .HasForeignKey(d => d.UserId)
-                .HasConstraintName("FK__Reviews__user_id__6477ECF3");
+                .HasForeignKey(d => d.Userid)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK__Reviews__userid__7E37BEF6");
         });
 
         modelBuilder.Entity<ReviewComment>(entity =>
         {
-            entity.HasKey(e => e.CommentId).HasName("PK__Review_C__E7957687DA06389E");
+            entity.HasKey(e => e.Id).HasName("PK__ReviewCo__3213E83FC7D7D706");
 
-            entity.ToTable("Review_Comments");
-
-            entity.Property(e => e.CommentId).HasColumnName("comment_id");
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.Comment)
                 .HasColumnType("text")
                 .HasColumnName("comment");
-            entity.Property(e => e.CreatedAt)
+            entity.Property(e => e.Createdat)
                 .HasDefaultValueSql("(sysdatetime())")
-                .HasColumnName("created_at");
-            entity.Property(e => e.ReviewId).HasColumnName("review_id");
-            entity.Property(e => e.UserId).HasColumnName("user_id");
+                .HasColumnName("createdat");
+            entity.Property(e => e.Reviewid).HasColumnName("reviewid");
+            entity.Property(e => e.Userid).HasColumnName("userid");
 
             entity.HasOne(d => d.Review).WithMany(p => p.ReviewComments)
-                .HasForeignKey(d => d.ReviewId)
-                .HasConstraintName("FK__Review_Co__revie__693CA210");
+                .HasForeignKey(d => d.Reviewid)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK__ReviewCom__revie__02FC7413");
 
             entity.HasOne(d => d.User).WithMany(p => p.ReviewComments)
-                .HasForeignKey(d => d.UserId)
-                .HasConstraintName("FK__Review_Co__user___6A30C649");
+                .HasForeignKey(d => d.Userid)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK__ReviewCom__useri__03F0984C");
         });
 
         modelBuilder.Entity<User>(entity =>
         {
-            entity.HasKey(e => e.UserId).HasName("PK__Users__B9BE370FEA4FBF30");
+            entity.HasKey(e => e.Id).HasName("PK__Users__3213E83F5655EC9E");
 
-            entity.HasIndex(e => e.Email, "UQ__Users__AB6E6164C526DFD4").IsUnique();
+            entity.HasIndex(e => e.Email, "UQ__Users__AB6E616471534E91").IsUnique();
 
-            entity.HasIndex(e => e.Username, "UQ__Users__F3DBC5720FC0E869").IsUnique();
+            entity.HasIndex(e => e.Username, "UQ__Users__F3DBC57227F8A18C").IsUnique();
 
-            entity.Property(e => e.UserId).HasColumnName("user_id");
+            entity.Property(e => e.Id)
+                .HasDefaultValueSql("(newid())")
+                .HasColumnName("id");
             entity.Property(e => e.Country)
                 .HasMaxLength(100)
                 .HasColumnName("country");
-            entity.Property(e => e.CreatedAt)
+            entity.Property(e => e.Createdat)
                 .HasDefaultValueSql("(sysutcdatetime())")
-                .HasColumnName("created_at");
+                .HasColumnName("createdat");
             entity.Property(e => e.Email)
                 .HasMaxLength(100)
                 .HasColumnName("email");
-            entity.Property(e => e.LastLogin)
+            entity.Property(e => e.Lastlogin)
                 .HasDefaultValueSql("(sysutcdatetime())")
-                .HasColumnName("last_login");
-            entity.Property(e => e.PasswordHash)
+                .HasColumnName("lastlogin");
+            entity.Property(e => e.Passwordhash)
                 .HasMaxLength(255)
-                .HasColumnName("password_hash");
+                .HasColumnName("passwordhash");
             entity.Property(e => e.Username)
                 .HasMaxLength(50)
                 .HasColumnName("username");
@@ -290,69 +313,65 @@ public partial class SteamCloneContext : DbContext
                 .UsingEntity<Dictionary<string, object>>(
                     "Wishlist",
                     r => r.HasOne<Game>().WithMany()
-                        .HasForeignKey("GameId")
+                        .HasForeignKey("Gameid")
                         .OnDelete(DeleteBehavior.ClientSetNull)
-                        .HasConstraintName("FK__Wishlist__game_i__6E01572D"),
+                        .HasConstraintName("FK__Wishlist__gameid__07C12930"),
                     l => l.HasOne<User>().WithMany()
-                        .HasForeignKey("UserId")
+                        .HasForeignKey("Userid")
                         .OnDelete(DeleteBehavior.ClientSetNull)
-                        .HasConstraintName("FK__Wishlist__user_i__6D0D32F4"),
+                        .HasConstraintName("FK__Wishlist__userid__06CD04F7"),
                     j =>
                     {
-                        j.HasKey("UserId", "GameId").HasName("PK__Wishlist__564026F3AC95D030");
+                        j.HasKey("Userid", "Gameid").HasName("PK__Wishlist__760889D01CE24CE6");
                         j.ToTable("Wishlist");
-                        j.IndexerProperty<int>("UserId").HasColumnName("user_id");
-                        j.IndexerProperty<int>("GameId").HasColumnName("game_id");
+                        j.IndexerProperty<Guid>("Userid").HasColumnName("userid");
+                        j.IndexerProperty<Guid>("Gameid").HasColumnName("gameid");
                     });
         });
 
         modelBuilder.Entity<UserAchievement>(entity =>
         {
-            entity.HasKey(e => new { e.UserId, e.AchievementId }).HasName("PK__User_Ach__9A7AA5E76B87568B");
+            entity.HasKey(e => new { e.Userid, e.Achievementid }).HasName("PK__UserAchi__3244E2D4D013C7FF");
 
-            entity.ToTable("User_Achievements");
-
-            entity.Property(e => e.UserId).HasColumnName("user_id");
-            entity.Property(e => e.AchievementId).HasColumnName("achievement_id");
-            entity.Property(e => e.UnlockedAt)
+            entity.Property(e => e.Userid).HasColumnName("userid");
+            entity.Property(e => e.Achievementid).HasColumnName("achievementid");
+            entity.Property(e => e.Unlockedat)
                 .HasDefaultValueSql("(sysutcdatetime())")
-                .HasColumnName("unlocked_at");
+                .HasColumnName("unlockedat");
 
             entity.HasOne(d => d.Achievement).WithMany(p => p.UserAchievements)
-                .HasForeignKey(d => d.AchievementId)
+                .HasForeignKey(d => d.Achievementid)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__User_Achi__achie__5EBF139D");
+                .HasConstraintName("FK__UserAchie__achie__778AC167");
 
             entity.HasOne(d => d.User).WithMany(p => p.UserAchievements)
-                .HasForeignKey(d => d.UserId)
+                .HasForeignKey(d => d.Userid)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__User_Achi__user___5DCAEF64");
+                .HasConstraintName("FK__UserAchie__useri__76969D2E");
         });
 
         modelBuilder.Entity<UserGame>(entity =>
         {
-            entity.HasKey(e => new { e.UserId, e.GameId }).HasName("PK__User_Gam__564026F3161E783D");
+            entity.HasKey(e => new { e.Userid, e.Gameid }).HasName("PK__UserGame__760889D06BB17686");
 
-            entity.ToTable("User_Games");
-
-            entity.Property(e => e.UserId).HasColumnName("user_id");
-            entity.Property(e => e.GameId).HasColumnName("game_id");
-            entity.Property(e => e.PlaytimeHours)
+            entity.Property(e => e.Userid).HasColumnName("userid");
+            entity.Property(e => e.Gameid).HasColumnName("gameid");
+            entity.Property(e => e.Playtimehours)
                 .HasDefaultValue(0)
-                .HasColumnName("playtime_hours");
-            entity.Property(e => e.PurchaseDate)
+                .HasColumnName("playtimehours");
+            entity.Property(e => e.Purchasedate)
                 .HasDefaultValueSql("(sysutcdatetime())")
-                .HasColumnName("purchase_date");
+                .HasColumnName("purchasedate");
 
             entity.HasOne(d => d.Game).WithMany(p => p.UserGames)
-                .HasForeignKey(d => d.GameId)
+                .HasForeignKey(d => d.Gameid)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__User_Game__game___52593CB8");
+                .HasConstraintName("FK__UserGames__gamei__6A30C649");
 
             entity.HasOne(d => d.User).WithMany(p => p.UserGames)
-                .HasForeignKey(d => d.UserId)
+                .HasForeignKey(d => d.Userid)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__User_Game__user___5165187F");
+                .HasConstraintName("FK__UserGames__useri__693CA210");
         });
 
         OnModelCreatingPartial(modelBuilder);

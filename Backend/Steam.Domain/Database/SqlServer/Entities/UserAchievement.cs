@@ -5,11 +5,11 @@ namespace Steam.Domain.Database.SqlServer.Entities;
 
 public partial class UserAchievement
 {
-    public int UserId { get; set; }
+    public Guid Userid { get; set; }
 
-    public int AchievementId { get; set; }
+    public Guid Achievementid { get; set; }
 
-    public DateTime UnlockedAt { get; set; }
+    public DateTime Unlockedat { get; set; }
 
     public virtual Achievement Achievement { get; set; } = null!;
 

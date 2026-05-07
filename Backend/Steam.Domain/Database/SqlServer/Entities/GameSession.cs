@@ -5,17 +5,17 @@ namespace Steam.Domain.Database.SqlServer.Entities;
 
 public partial class GameSession
 {
-    public int SessionId { get; set; }
+    public Guid Id { get; set; }
 
-    public int? UsuarioId { get; set; }
+    public Guid Usuarioid { get; set; }
 
-    public int? GameId { get; set; }
+    public Guid Gameid { get; set; }
 
-    public DateTime? StartTime { get; set; }
+    public DateTime? Starttime { get; set; }
 
-    public DateTime? EndTime { get; set; }
+    public DateTime? Endtime { get; set; }
 
-    public virtual Game? Game { get; set; }
+    public virtual Game Game { get; set; } = null!;
 
-    public virtual User? Usuario { get; set; }
+    public virtual User Usuario { get; set; } = null!;
 }

@@ -5,13 +5,13 @@ namespace Steam.Domain.Database.SqlServer.Entities;
 
 public partial class Friend
 {
-    public int UserId { get; set; }
+    public Guid Userid { get; set; }
 
-    public int FriendId { get; set; }
+    public Guid Friendid { get; set; }
 
     public string? Status { get; set; }
 
-    public DateTime CreatedAt { get; set; }
+    public DateTime Createdat { get; set; }
 
     public virtual User FriendNavigation { get; set; } = null!;
 

@@ -42,11 +42,11 @@ namespace Steam.Infrastructure.Persistence.SqlServer.Repositories
             }
         }
 
-        public async Task<User?> Get(int userId)
+        public async Task<User?> Get(Guid userId)
         {
             try
             {
-                return await context.Users.FirstOrDefaultAsync(x => x.UserId == userId);
+                return await context.Users.FirstOrDefaultAsync(x => x.Id == userId);
             }
             catch (Exception)
             {
@@ -65,11 +65,11 @@ namespace Steam.Infrastructure.Persistence.SqlServer.Repositories
             throw new NotImplementedException();
         }
 
-        public async Task<bool> IfExiste(int userId)
+        public async Task<bool> IfExiste(Guid userId)
         {
             try
             {
-                return await context.Users.AnyAsync(x => x.UserId == userId);
+                return await context.Users.AnyAsync(x => x.Id == userId);
             }
             catch (Exception)
             {

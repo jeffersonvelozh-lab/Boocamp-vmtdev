@@ -5,7 +5,7 @@ namespace Steam.Domain.Database.SqlServer.Entities;
 
 public partial class Developer
 {
-    public int DeveloperId { get; set; }
+    public Guid Id { get; set; }
 
     public string Name { get; set; } = null!;
 
