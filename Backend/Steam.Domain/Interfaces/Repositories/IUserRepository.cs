@@ -5,7 +5,6 @@ namespace Steam.Domain.Interfaces.Repositories
     public interface IUserRepository
     {
         Task<User> Create(User user);
-        Task<bool> Delete(User user);
         Task<User> Update(User user);
         Task<User?> Get(Guid userId);
         Task<User?> Get(String email);

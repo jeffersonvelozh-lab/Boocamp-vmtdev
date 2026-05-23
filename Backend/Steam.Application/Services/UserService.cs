@@ -7,12 +7,15 @@ using Steam.Application.Models.Responses;
 using Steam.Domain.Database.SqlServer.Entities;
 using Steam.Domain.Interfaces.Repositories;
 using Steam.Shared.Constans;
+using Steam.Shared.Helpers;
 
 namespace Steam.Application.Services
 {
     public class UserService(IUserRepository repository) : IUserService
 
     {
+
+        //Método que crea un usuario
         public async Task<GenericResponse<UserDto>> Create(CreateUserRequest modl)
         {
             var create = await repository.Create(new User
@@ -36,9 +39,10 @@ namespace Steam.Application.Services
         {
             var user = await GetUser(UserId);
 
-            var delete = await repository.Delete(user);
+            user.DeleteAt = DataTimeHelpers.UtcNow();
+            await repository.Update(user);
 
-            return PesponseHelper.Create(delete);
+            return PesponseHelper.Create(true);
         }
 
         public async Task<GenericResponse<UserDto>> Get(Guid UserId)
@@ -51,21 +55,25 @@ namespace Steam.Application.Services
         {
             var querable = repository.Queryable();
 
+            //filtrado del usuario por el nombre
             if (string.IsNullOrWhiteSpace(model.Nombre))
             {
                 querable = querable.Where(x => x.Username.Contains(model.Nombre ?? ""));
             }
+            //filtrado del usuario por el email
             if (string.IsNullOrWhiteSpace(model.Correo))
             {
                 querable = querable.Where(x => x.Email.Contains(model.Correo ?? ""));
             }
+            //filtrado del usuario por el pais
             if (string.IsNullOrWhiteSpace(model.Pais))
             {
                 querable = querable.Where(x => x.Country != null && x.Country.Contains(model.Pais ?? ""));
             }
-
+            //realiza paginación y realizar consulta
             var users = querable.Take(model.Limit).Skip(model.Offset).ToList();
 
+            //Mapear al los usuarios
             List<UserDto> mapped = [];
             foreach (var user in users)
             {
@@ -78,7 +86,6 @@ namespace Steam.Application.Services
         public async Task<GenericResponse<UserDto>> Update(Guid UserId, UpdateUserRequest modl)
         {
             var user = await GetUser(UserId);
-
             user.Username = modl.Nombre ?? user.Username;
             user.Email = modl.Correo ?? user.Email;
             user.Passwordhash = modl.Password ?? user.Passwordhash;
@@ -97,6 +104,8 @@ namespace Steam.Application.Services
                 ?? throw new Exception(ResponseConstans.USER_NOT_EXISTS);
         }
 
+
+        //Metodo que retorna el dto
         private static UserDto Map(User user)
         {
             return new UserDto

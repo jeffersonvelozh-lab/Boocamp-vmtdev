@@ -918,6 +918,7 @@
       },
       "Steam.Application/1.0.0": {
         "dependencies": {
+          "Steam.Domain": "1.0.0",
           "Steam.Shared": "1.0.0"
         },
         "runtime": {
@@ -940,6 +941,10 @@
         }
       },
       "Steam.Infrastructure/1.0.0": {
+        "dependencies": {
+          "Steam.Domain": "1.0.0",
+          "Steam.Shared": "1.0.0"
+        },
         "runtime": {
           "Steam.Infrastructure.dll": {
             "assemblyVersion": "1.0.0.0",

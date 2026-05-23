@@ -25,28 +25,11 @@ namespace Steam.Infrastructure.Persistence.SqlServer.Repositories
             }
         }
 
-        public async Task<bool> Delete(User user)
-        {
-            try
-            {
-                context.Users.Remove(user);
-
-                var deletecount = await context.SaveChangesAsync();
-
-                return deletecount > 0;
-
-            }
-            catch (Exception)
-            {
-                return false;
-            }
-        }
-
         public async Task<User?> Get(Guid userId)
         {
             try
             {
-                return await context.Users.FirstOrDefaultAsync(x => x.Id == userId);
+                return await context.Users.FirstOrDefaultAsync(x => x.Id == userId && x.DeleteAt == null);
             }
             catch (Exception)
             {
@@ -83,7 +66,7 @@ namespace Steam.Infrastructure.Persistence.SqlServer.Repositories
             try
             {
 
-                return context.Users.AsQueryable();
+                return context.Users.Where(x => x.DeleteAt == null).AsQueryable();
 
             }
             catch (Exception)

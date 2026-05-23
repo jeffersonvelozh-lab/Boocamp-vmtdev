@@ -2,8 +2,8 @@
 GO
 
 -- Crear base de datos
-IF NOT EXISTS (SELECT name FROM sys.databases WHERE name = 'SteamClone')
-    CREATE DATABASE SteamClone;
+IF NOT EXISTS (SELECT name FROM sys.databases WHERE name = 'ArcadeX')
+    CREATE DATABASE ArcadeX;
 GO
 
 

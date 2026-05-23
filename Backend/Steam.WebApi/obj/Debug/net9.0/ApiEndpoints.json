@@ -24,9 +24,29 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "model",
-        "Type": "Steam.Application.Models.Request.Users.FilterUserRequest",
-        "IsRequired": true
+        "Name": "Nombre",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Correo",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Pais",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Limit",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Offset",
+        "Type": "System.Int32",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []

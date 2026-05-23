@@ -115,7 +115,6 @@ C:\Users\Usuario\OneDrive\Escritorio\Boocamp V\Boocamp-vmtdev\Backend\Steam.WebA
 C:\Users\Usuario\OneDrive\Escritorio\Boocamp V\Boocamp-vmtdev\Backend\Steam.WebApi\obj\Debug\net9.0\Steam.WebApi.csproj.CoreCompileInputs.cache
 C:\Users\Usuario\OneDrive\Escritorio\Boocamp V\Boocamp-vmtdev\Backend\Steam.WebApi\obj\Debug\net9.0\Steam.WebApi.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\Usuario\OneDrive\Escritorio\Boocamp V\Boocamp-vmtdev\Backend\Steam.WebApi\obj\Debug\net9.0\Steam.WebApi.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\Usuario\OneDrive\Escritorio\Boocamp V\Boocamp-vmtdev\Backend\Steam.WebApi\obj\Debug\net9.0\Steam.WebApi.sourcelink.json
 C:\Users\Usuario\OneDrive\Escritorio\Boocamp V\Boocamp-vmtdev\Backend\Steam.WebApi\obj\Debug\net9.0\rjimswa.dswa.cache.json
 C:\Users\Usuario\OneDrive\Escritorio\Boocamp V\Boocamp-vmtdev\Backend\Steam.WebApi\obj\Debug\net9.0\rjsmrazor.dswa.cache.json
 C:\Users\Usuario\OneDrive\Escritorio\Boocamp V\Boocamp-vmtdev\Backend\Steam.WebApi\obj\Debug\net9.0\rjsmcshtml.dswa.cache.json
@@ -170,3 +169,4 @@ C:\Users\Usuario\OneDrive\Escritorio\Boocamp V\Boocamp-vmtdev\Backend\Steam.WebA
 C:\Users\Usuario\OneDrive\Escritorio\Boocamp V\Boocamp-vmtdev\Backend\Steam.WebApi\bin\Debug\net9.0\Steam.Infrastructure.dll
 C:\Users\Usuario\OneDrive\Escritorio\Boocamp V\Boocamp-vmtdev\Backend\Steam.WebApi\bin\Debug\net9.0\Steam.Domain.pdb
 C:\Users\Usuario\OneDrive\Escritorio\Boocamp V\Boocamp-vmtdev\Backend\Steam.WebApi\bin\Debug\net9.0\Steam.Infrastructure.pdb
+C:\Users\Usuario\OneDrive\Escritorio\Boocamp V\Boocamp-vmtdev\Backend\Steam.WebApi\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt

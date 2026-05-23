@@ -38,9 +38,10 @@ C:\Users\Usuario\OneDrive\Escritorio\Boocamp V\Boocamp-vmtdev\Backend\Steam.Appl
 C:\Users\Usuario\OneDrive\Escritorio\Boocamp V\Boocamp-vmtdev\Backend\Steam.Application\obj\Debug\net9.0\Steam.Application.AssemblyInfoInputs.cache
 C:\Users\Usuario\OneDrive\Escritorio\Boocamp V\Boocamp-vmtdev\Backend\Steam.Application\obj\Debug\net9.0\Steam.Application.AssemblyInfo.cs
 C:\Users\Usuario\OneDrive\Escritorio\Boocamp V\Boocamp-vmtdev\Backend\Steam.Application\obj\Debug\net9.0\Steam.Application.csproj.CoreCompileInputs.cache
-C:\Users\Usuario\OneDrive\Escritorio\Boocamp V\Boocamp-vmtdev\Backend\Steam.Application\obj\Debug\net9.0\Steam.Application.sourcelink.json
 C:\Users\Usuario\OneDrive\Escritorio\Boocamp V\Boocamp-vmtdev\Backend\Steam.Application\obj\Debug\net9.0\Steam.Ap.44EA405E.Up2Date
 C:\Users\Usuario\OneDrive\Escritorio\Boocamp V\Boocamp-vmtdev\Backend\Steam.Application\obj\Debug\net9.0\Steam.Application.dll
 C:\Users\Usuario\OneDrive\Escritorio\Boocamp V\Boocamp-vmtdev\Backend\Steam.Application\obj\Debug\net9.0\refint\Steam.Application.dll
 C:\Users\Usuario\OneDrive\Escritorio\Boocamp V\Boocamp-vmtdev\Backend\Steam.Application\obj\Debug\net9.0\Steam.Application.pdb
 C:\Users\Usuario\OneDrive\Escritorio\Boocamp V\Boocamp-vmtdev\Backend\Steam.Application\obj\Debug\net9.0\ref\Steam.Application.dll
+C:\Users\Usuario\OneDrive\Escritorio\Boocamp V\Boocamp-vmtdev\Backend\Steam.Application\bin\Debug\net9.0\Steam.Domain.dll
+C:\Users\Usuario\OneDrive\Escritorio\Boocamp V\Boocamp-vmtdev\Backend\Steam.Application\bin\Debug\net9.0\Steam.Domain.pdb

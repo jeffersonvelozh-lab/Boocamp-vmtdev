@@ -19,6 +19,8 @@ public partial class User
 
     public DateTime Lastlogin { get; set; }
 
+    public DateTime? DeleteAt { get; set; }
+
     public virtual ICollection<Friend> FriendFriendNavigations { get; set; } = new List<Friend>();
 
     public virtual ICollection<Friend> FriendUsers { get; set; } = new List<Friend>();

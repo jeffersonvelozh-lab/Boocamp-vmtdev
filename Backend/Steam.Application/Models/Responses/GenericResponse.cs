@@ -2,8 +2,8 @@
 {
     public class GenericResponse<T>
     {
-        public string Message { get; set; }
+        public required string Message { get; set; }
         public DateTime TimeStamp { get; } = DateTimeOffset.UtcNow.DateTime;
-        public T Data { get; set; }
+        public required T Data { get; set; }
     }
 }
