@@ -3,16 +3,56 @@
   "WorkspaceRootPath": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\Boocamp V\\Boocamp-vmtdev\\Backend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D70C660A-BDBE-4B64-8E98-F272A6B7BEE9}|Steam.Infrastructure\\Steam.Infrastructure.csproj|c:\\users\\usuario\\onedrive\\escritorio\\boocamp v\\boocamp-vmtdev\\backend\\steam.infrastructure\\persistence\\sqlserver\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D70C660A-BDBE-4B64-8E98-F272A6B7BEE9}|Steam.Infrastructure\\Steam.Infrastructure.csproj|solutionrelative:steam.infrastructure\\persistence\\sqlserver\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{1806BC43-109B-D20E-2433-617008A32D0F}|Steam.WebApi\\Steam.WebApi.csproj|c:\\users\\usuario\\onedrive\\escritorio\\boocamp v\\boocamp-vmtdev\\backend\\steam.webapi\\extensions\\servicecollectionextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1806BC43-109B-D20E-2433-617008A32D0F}|Steam.WebApi\\Steam.WebApi.csproj|solutionrelative:steam.webapi\\extensions\\servicecollectionextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{1806BC43-109B-D20E-2433-617008A32D0F}|Steam.WebApi\\Steam.WebApi.csproj|c:\\users\\usuario\\onedrive\\escritorio\\boocamp v\\boocamp-vmtdev\\backend\\steam.webapi\\controllers\\rolecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1806BC43-109B-D20E-2433-617008A32D0F}|Steam.WebApi\\Steam.WebApi.csproj|solutionrelative:steam.webapi\\controllers\\rolecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{1806BC43-109B-D20E-2433-617008A32D0F}|Steam.WebApi\\Steam.WebApi.csproj|c:\\users\\usuario\\onedrive\\escritorio\\boocamp v\\boocamp-vmtdev\\backend\\steam.webapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1806BC43-109B-D20E-2433-617008A32D0F}|Steam.WebApi\\Steam.WebApi.csproj|solutionrelative:steam.webapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED12F47F-3CD8-BA58-F3DB-AED4416D1D4B}|Steam.Application\\Steam.Application.csproj|c:\\users\\usuario\\onedrive\\escritorio\\boocamp v\\boocamp-vmtdev\\backend\\steam.application\\services\\roleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED12F47F-3CD8-BA58-F3DB-AED4416D1D4B}|Steam.Application\\Steam.Application.csproj|solutionrelative:steam.application\\services\\roleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED12F47F-3CD8-BA58-F3DB-AED4416D1D4B}|Steam.Application\\Steam.Application.csproj|c:\\users\\usuario\\onedrive\\escritorio\\boocamp v\\boocamp-vmtdev\\backend\\steam.application\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED12F47F-3CD8-BA58-F3DB-AED4416D1D4B}|Steam.Application\\Steam.Application.csproj|solutionrelative:steam.application\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED12F47F-3CD8-BA58-F3DB-AED4416D1D4B}|Steam.Application\\Steam.Application.csproj|c:\\users\\usuario\\onedrive\\escritorio\\boocamp v\\boocamp-vmtdev\\backend\\steam.application\\models\\request\\roles\\filterrolerequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED12F47F-3CD8-BA58-F3DB-AED4416D1D4B}|Steam.Application\\Steam.Application.csproj|solutionrelative:steam.application\\models\\request\\roles\\filterrolerequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D70C660A-BDBE-4B64-8E98-F272A6B7BEE9}|Steam.Infrastructure\\Steam.Infrastructure.csproj|c:\\users\\usuario\\onedrive\\escritorio\\boocamp v\\boocamp-vmtdev\\backend\\steam.infrastructure\\persistence\\sqlserver\\repositories\\rolesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D70C660A-BDBE-4B64-8E98-F272A6B7BEE9}|Steam.Infrastructure\\Steam.Infrastructure.csproj|solutionrelative:steam.infrastructure\\persistence\\sqlserver\\repositories\\rolesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D70C660A-BDBE-4B64-8E98-F272A6B7BEE9}|Steam.Infrastructure\\Steam.Infrastructure.csproj|c:\\users\\usuario\\onedrive\\escritorio\\boocamp v\\boocamp-vmtdev\\backend\\steam.infrastructure\\persistence\\sqlserver\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D70C660A-BDBE-4B64-8E98-F272A6B7BEE9}|Steam.Infrastructure\\Steam.Infrastructure.csproj|solutionrelative:steam.infrastructure\\persistence\\sqlserver\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C4D084C-FC08-48B5-B0E6-1BA62B38CD97}|Steam.Domain\\Steam.Domain.csproj|c:\\users\\usuario\\onedrive\\escritorio\\boocamp v\\boocamp-vmtdev\\backend\\steam.domain\\interfaces\\repositories\\irolesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C4D084C-FC08-48B5-B0E6-1BA62B38CD97}|Steam.Domain\\Steam.Domain.csproj|solutionrelative:steam.domain\\interfaces\\repositories\\irolesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED12F47F-3CD8-BA58-F3DB-AED4416D1D4B}|Steam.Application\\Steam.Application.csproj|c:\\users\\usuario\\onedrive\\escritorio\\boocamp v\\boocamp-vmtdev\\backend\\steam.application\\interfaces\\services\\iroleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED12F47F-3CD8-BA58-F3DB-AED4416D1D4B}|Steam.Application\\Steam.Application.csproj|solutionrelative:steam.application\\interfaces\\services\\iroleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED12F47F-3CD8-BA58-F3DB-AED4416D1D4B}|Steam.Application\\Steam.Application.csproj|c:\\users\\usuario\\onedrive\\escritorio\\boocamp v\\boocamp-vmtdev\\backend\\steam.application\\models\\dtos\\roledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED12F47F-3CD8-BA58-F3DB-AED4416D1D4B}|Steam.Application\\Steam.Application.csproj|solutionrelative:steam.application\\models\\dtos\\roledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED12F47F-3CD8-BA58-F3DB-AED4416D1D4B}|Steam.Application\\Steam.Application.csproj|c:\\users\\usuario\\onedrive\\escritorio\\boocamp v\\boocamp-vmtdev\\backend\\steam.application\\helpers\\pesponsehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED12F47F-3CD8-BA58-F3DB-AED4416D1D4B}|Steam.Application\\Steam.Application.csproj|solutionrelative:steam.application\\helpers\\pesponsehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED12F47F-3CD8-BA58-F3DB-AED4416D1D4B}|Steam.Application\\Steam.Application.csproj|c:\\users\\usuario\\onedrive\\escritorio\\boocamp v\\boocamp-vmtdev\\backend\\steam.application\\models\\request\\roles\\createrolerequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED12F47F-3CD8-BA58-F3DB-AED4416D1D4B}|Steam.Application\\Steam.Application.csproj|solutionrelative:steam.application\\models\\request\\roles\\createrolerequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +62,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
@@ -32,7 +72,7 @@
               "RelativeDocumentMoniker": "Steam.WebApi\\Controllers\\UserController.cs",
               "ToolTip": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\Boocamp V\\Boocamp-vmtdev\\Backend\\Steam.WebApi\\Controllers\\UserController.cs",
               "RelativeToolTip": "Steam.WebApi\\Controllers\\UserController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAACEAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-24T02:03:19.183Z",
               "IsPinned": true,
@@ -41,27 +81,157 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "RoleController.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\Boocamp V\\Boocamp-vmtdev\\Backend\\Steam.WebApi\\Controllers\\RoleController.cs",
+              "RelativeDocumentMoniker": "Steam.WebApi\\Controllers\\RoleController.cs",
+              "ToolTip": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\Boocamp V\\Boocamp-vmtdev\\Backend\\Steam.WebApi\\Controllers\\RoleController.cs",
+              "RelativeToolTip": "Steam.WebApi\\Controllers\\RoleController.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAAABYAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-24T03:58:53.761Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "RoleService.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\Boocamp V\\Boocamp-vmtdev\\Backend\\Steam.Application\\Services\\RoleService.cs",
+              "RelativeDocumentMoniker": "Steam.Application\\Services\\RoleService.cs",
+              "ToolTip": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\Boocamp V\\Boocamp-vmtdev\\Backend\\Steam.Application\\Services\\RoleService.cs",
+              "RelativeToolTip": "Steam.Application\\Services\\RoleService.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAQwCgAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-24T03:17:35.212Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\Boocamp V\\Boocamp-vmtdev\\Backend\\Steam.Application\\Services\\UserService.cs",
+              "RelativeDocumentMoniker": "Steam.Application\\Services\\UserService.cs",
+              "ToolTip": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\Boocamp V\\Boocamp-vmtdev\\Backend\\Steam.Application\\Services\\UserService.cs",
+              "RelativeToolTip": "Steam.Application\\Services\\UserService.cs",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAowEkAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-24T03:08:13.784Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "ServiceCollectionExtension.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\Boocamp V\\Boocamp-vmtdev\\Backend\\Steam.WebApi\\Extensions\\ServiceCollectionExtension.cs",
               "RelativeDocumentMoniker": "Steam.WebApi\\Extensions\\ServiceCollectionExtension.cs",
               "ToolTip": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\Boocamp V\\Boocamp-vmtdev\\Backend\\Steam.WebApi\\Extensions\\ServiceCollectionExtension.cs",
               "RelativeToolTip": "Steam.WebApi\\Extensions\\ServiceCollectionExtension.cs",
-              "ViewState": "AgIAACIAAAAAAAAAAAAAwCwAAAAmAAAAAAAAAA==",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAuwB0AAABGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-24T02:08:58.564Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
+              "Title": "FilterRoleRequest.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\Boocamp V\\Boocamp-vmtdev\\Backend\\Steam.Application\\Models\\Request\\Roles\\FilterRoleRequest.cs",
+              "RelativeDocumentMoniker": "Steam.Application\\Models\\Request\\Roles\\FilterRoleRequest.cs",
+              "ToolTip": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\Boocamp V\\Boocamp-vmtdev\\Backend\\Steam.Application\\Models\\Request\\Roles\\FilterRoleRequest.cs",
+              "RelativeToolTip": "Steam.Application\\Models\\Request\\Roles\\FilterRoleRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-24T02:56:44.346Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "RolesRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\Boocamp V\\Boocamp-vmtdev\\Backend\\Steam.Infrastructure\\Persistence\\SqlServer\\Repositories\\RolesRepository.cs",
+              "RelativeDocumentMoniker": "Steam.Infrastructure\\Persistence\\SqlServer\\Repositories\\RolesRepository.cs",
+              "ToolTip": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\Boocamp V\\Boocamp-vmtdev\\Backend\\Steam.Infrastructure\\Persistence\\SqlServer\\Repositories\\RolesRepository.cs",
+              "RelativeToolTip": "Steam.Infrastructure\\Persistence\\SqlServer\\Repositories\\RolesRepository.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAWwDwAAABSAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-24T02:31:14.147Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "UserRepository.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\Boocamp V\\Boocamp-vmtdev\\Backend\\Steam.Infrastructure\\Persistence\\SqlServer\\Repositories\\UserRepository.cs",
               "RelativeDocumentMoniker": "Steam.Infrastructure\\Persistence\\SqlServer\\Repositories\\UserRepository.cs",
               "ToolTip": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\Boocamp V\\Boocamp-vmtdev\\Backend\\Steam.Infrastructure\\Persistence\\SqlServer\\Repositories\\UserRepository.cs",
               "RelativeToolTip": "Steam.Infrastructure\\Persistence\\SqlServer\\Repositories\\UserRepository.cs",
-              "ViewState": "AgIAAD8AAAAAAAAAAAAAAEQAAAA6AAAAAAAAAA==",
+              "ViewState": "AgIAADYAAAAAAAAAAAAowCAAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-24T02:08:33.603Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "IRolesRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\Boocamp V\\Boocamp-vmtdev\\Backend\\Steam.Domain\\Interfaces\\Repositories\\IRolesRepository.cs",
+              "RelativeDocumentMoniker": "Steam.Domain\\Interfaces\\Repositories\\IRolesRepository.cs",
+              "ToolTip": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\Boocamp V\\Boocamp-vmtdev\\Backend\\Steam.Domain\\Interfaces\\Repositories\\IRolesRepository.cs*",
+              "RelativeToolTip": "Steam.Domain\\Interfaces\\Repositories\\IRolesRepository.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-24T02:27:30.493Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "IRoleService.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\Boocamp V\\Boocamp-vmtdev\\Backend\\Steam.Application\\Interfaces\\Services\\IRoleService.cs",
+              "RelativeDocumentMoniker": "Steam.Application\\Interfaces\\Services\\IRoleService.cs",
+              "ToolTip": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\Boocamp V\\Boocamp-vmtdev\\Backend\\Steam.Application\\Interfaces\\Services\\IRoleService.cs",
+              "RelativeToolTip": "Steam.Application\\Interfaces\\Services\\IRoleService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABLAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-24T03:11:03.509Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "PesponseHelper.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\Boocamp V\\Boocamp-vmtdev\\Backend\\Steam.Application\\Helpers\\PesponseHelper.cs",
+              "RelativeDocumentMoniker": "Steam.Application\\Helpers\\PesponseHelper.cs",
+              "ToolTip": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\Boocamp V\\Boocamp-vmtdev\\Backend\\Steam.Application\\Helpers\\PesponseHelper.cs",
+              "RelativeToolTip": "Steam.Application\\Helpers\\PesponseHelper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-24T03:07:39.257Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "CreateRoleRequest.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\Boocamp V\\Boocamp-vmtdev\\Backend\\Steam.Application\\Models\\Request\\Roles\\CreateRoleRequest.cs",
+              "RelativeDocumentMoniker": "Steam.Application\\Models\\Request\\Roles\\CreateRoleRequest.cs",
+              "ToolTip": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\Boocamp V\\Boocamp-vmtdev\\Backend\\Steam.Application\\Models\\Request\\Roles\\CreateRoleRequest.cs",
+              "RelativeToolTip": "Steam.Application\\Models\\Request\\Roles\\CreateRoleRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-24T02:57:11.141Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "RoleDto.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\Boocamp V\\Boocamp-vmtdev\\Backend\\Steam.Application\\Models\\Dtos\\RoleDto.cs",
+              "RelativeDocumentMoniker": "Steam.Application\\Models\\Dtos\\RoleDto.cs",
+              "ToolTip": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\Boocamp V\\Boocamp-vmtdev\\Backend\\Steam.Application\\Models\\Dtos\\RoleDto.cs",
+              "RelativeToolTip": "Steam.Application\\Models\\Dtos\\RoleDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-24T02:54:06.331Z",
               "EditorCaption": ""
             },
             {

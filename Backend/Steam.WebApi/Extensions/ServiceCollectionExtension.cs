@@ -15,6 +15,7 @@ namespace Steam.WebApi.Extensions
         public static void AddServices(this IServiceCollection service)
         {
             service.AddScoped<IUserService, UserService>();
+            service.AddScoped<IRoleService, RoleService>();
 
         }
 
@@ -26,6 +27,7 @@ namespace Steam.WebApi.Extensions
         public static void AddRepositories(this IServiceCollection service)
         {
             service.AddTransient<IUserRepository, UserRepository>();
+            service.AddTransient<IRolesRepository, RolesRepository>();
 
         }
 
