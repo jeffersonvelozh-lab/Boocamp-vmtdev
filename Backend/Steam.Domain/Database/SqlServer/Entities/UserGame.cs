@@ -11,7 +11,7 @@ public partial class UserGame
 
     public DateTime Purchasedate { get; set; }
 
-    public int? Playtimehours { get; set; }
+    public int? Playtimeminutes { get; set; }
 
     public virtual Game Game { get; set; } = null!;
 

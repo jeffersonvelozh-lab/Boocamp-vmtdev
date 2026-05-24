@@ -41,7 +41,7 @@ namespace Steam.WebApi.Extensions
             service.AddOpenApi();
 
             //DataBase
-            service.AddSqlServer<SteamCloneContext>(configuration.GetConnectionString("Database"));
+            service.AddSqlServer<ArcadeXContext>(configuration.GetConnectionString("Database"));
             service.AddRepositories();
 
             service.AddServices();

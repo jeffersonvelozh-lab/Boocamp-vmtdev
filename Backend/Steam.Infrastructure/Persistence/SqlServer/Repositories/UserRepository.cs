@@ -5,7 +5,7 @@ using Steam.Domain.Interfaces.Repositories;
 
 namespace Steam.Infrastructure.Persistence.SqlServer.Repositories
 {
-    public class UserRepository(SteamCloneContext context) : IUserRepository
+    public class UserRepository(ArcadeXContext context) : IUserRepository
     {
         public async Task<User> Create(User user)
         {
@@ -29,7 +29,7 @@ namespace Steam.Infrastructure.Persistence.SqlServer.Repositories
         {
             try
             {
-                return await context.Users.FirstOrDefaultAsync(x => x.Id == userId && x.DeleteAt == null);
+                return await context.Users.FirstOrDefaultAsync(x => x.Id == userId && x.Deleteat == null);
             }
             catch (Exception)
             {
@@ -66,7 +66,7 @@ namespace Steam.Infrastructure.Persistence.SqlServer.Repositories
             try
             {
 
-                return context.Users.Where(x => x.DeleteAt == null).AsQueryable();
+                return context.Users.Where(x => x.Deleteat == null).AsQueryable();
 
             }
             catch (Exception)

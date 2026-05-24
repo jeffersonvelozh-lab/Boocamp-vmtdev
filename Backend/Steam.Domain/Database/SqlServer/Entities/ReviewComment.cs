@@ -13,7 +13,9 @@ public partial class ReviewComment
 
     public string? Comment { get; set; }
 
-    public DateTime? Createdat { get; set; }
+    public DateTime Createdat { get; set; }
+
+    public DateTime? Deleteat { get; set; }
 
     public virtual Review Review { get; set; } = null!;
 

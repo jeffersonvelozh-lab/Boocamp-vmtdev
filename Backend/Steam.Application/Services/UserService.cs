@@ -20,10 +20,10 @@ namespace Steam.Application.Services
         {
             var create = await repository.Create(new User
             {
-                Username = modl.Nombre,
-                Email = modl.Correo,
-                Passwordhash = modl.Password,
-                Country = modl.Pais
+                Username = modl.username,
+                Email = modl.email,
+                Passwordhash = modl.passwordhash,
+                Country = modl.country
 
             });
 
@@ -39,7 +39,7 @@ namespace Steam.Application.Services
         {
             var user = await GetUser(UserId);
 
-            user.DeleteAt = DataTimeHelpers.UtcNow();
+            user.Deleteat = DataTimeHelpers.UtcNow();
             await repository.Update(user);
 
             return PesponseHelper.Create(true);

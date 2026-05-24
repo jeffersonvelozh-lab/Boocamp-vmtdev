@@ -19,13 +19,15 @@ public partial class User
 
     public DateTime Lastlogin { get; set; }
 
-    public DateTime? DeleteAt { get; set; }
+    public DateTime? Deleteat { get; set; }
 
     public virtual ICollection<Friend> FriendFriendNavigations { get; set; } = new List<Friend>();
 
     public virtual ICollection<Friend> FriendUsers { get; set; } = new List<Friend>();
 
     public virtual ICollection<GameSession> GameSessions { get; set; } = new List<GameSession>();
+
+    public virtual ICollection<Game> Games { get; set; } = new List<Game>();
 
     public virtual ICollection<ReviewComment> ReviewComments { get; set; } = new List<ReviewComment>();
 
@@ -35,5 +37,7 @@ public partial class User
 
     public virtual ICollection<UserGame> UserGames { get; set; } = new List<UserGame>();
 
-    public virtual ICollection<Game> Games { get; set; } = new List<Game>();
+    public virtual ICollection<UserRole> UserRoles { get; set; } = new List<UserRole>();
+
+    public virtual ICollection<Wishlist> Wishlists { get; set; } = new List<Wishlist>();
 }

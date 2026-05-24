@@ -8,21 +8,21 @@ namespace Steam.Application.Models.Request.Users
         [Required]
         [MaxLength(150, ErrorMessage = ValidatioConstans.MAX_LENGTH)]
         [MinLength(2, ErrorMessage = ValidatioConstans.MIN_LENGTH)]
-        public required string Nombre { get; set; }
+        public required string username { get; set; }
 
         [Required]
         [MaxLength(150, ErrorMessage = ValidatioConstans.MAX_LENGTH)]
         [MinLength(2, ErrorMessage = ValidatioConstans.MIN_LENGTH)]
-        public required string Correo { get; set; }
+        public required string email { get; set; }
 
         [Required]
         [MaxLength(150, ErrorMessage = ValidatioConstans.MAX_LENGTH)]
         [MinLength(2, ErrorMessage = ValidatioConstans.MIN_LENGTH)]
-        public required string Password { get; set; }
+        public required string passwordhash { get; set; }
 
         [Required]
         [MaxLength(150, ErrorMessage = ValidatioConstans.MAX_LENGTH)]
         [MinLength(2, ErrorMessage = ValidatioConstans.MIN_LENGTH)]
-        public required string Pais { get; set; }
+        public required string country { get; set; }
     }
 }

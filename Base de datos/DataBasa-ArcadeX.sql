@@ -26,6 +26,7 @@ GO
 -- =========================================
 
 CREATE TABLE Users (
+
     id UNIQUEIDENTIFIER NOT NULL PRIMARY KEY DEFAULT NEWID(),
 
     username NVARCHAR(50) NOT NULL UNIQUE,
@@ -38,7 +39,9 @@ CREATE TABLE Users (
 
     createdat DATETIME2 NOT NULL DEFAULT SYSUTCDATETIME(),
 
-    lastlogin DATETIME2 NOT NULL DEFAULT SYSUTCDATETIME()
+    lastlogin DATETIME2 NOT NULL DEFAULT SYSUTCDATETIME(),
+
+	deleteat DATETIME2 NULL
 );
 GO
 
@@ -47,9 +50,12 @@ GO
 -- =========================================
 
 CREATE TABLE Roles (
+
     id INT IDENTITY(1,1) PRIMARY KEY,
 
-    name NVARCHAR(50) NOT NULL UNIQUE
+    name NVARCHAR(50) NOT NULL UNIQUE,
+
+	deleteat DATETIME2 NULL
 );
 GO
 
@@ -58,17 +64,19 @@ GO
 -- =========================================
 
 CREATE TABLE UserRoles (
+
     userid UNIQUEIDENTIFIER NOT NULL,
 
     roleid INT NOT NULL,
 
+	deleteat DATETIME2 NULL,
+
     PRIMARY KEY(userid, roleid),
 
-    FOREIGN KEY(userid)
-        REFERENCES Users(id),
+    FOREIGN KEY(userid) REFERENCES Users(id),
+        
+    FOREIGN KEY(roleid) REFERENCES Roles(id),
 
-    FOREIGN KEY(roleid)
-        REFERENCES Roles(id)
 );
 GO
 
@@ -77,22 +85,22 @@ GO
 -- =========================================
 
 CREATE TABLE Games (
+
     id UNIQUEIDENTIFIER NOT NULL PRIMARY KEY DEFAULT NEWID(),
 
     title NVARCHAR(150) NOT NULL,
 
     description NVARCHAR(MAX),
 
-    price DECIMAL(10,2)
-        CHECK (price >= 0)
-        DEFAULT 0,
+    price DECIMAL(10,2) CHECK (price >= 0) DEFAULT 0,
 
     releasedate DATETIME2 NOT NULL DEFAULT SYSUTCDATETIME(),
 
     ownerid UNIQUEIDENTIFIER NOT NULL,
 
-    FOREIGN KEY (ownerid)
-        REFERENCES Users(id)
+	deleteat DATETIME2 NULL
+
+    FOREIGN KEY (ownerid) REFERENCES Users(id)
 );
 GO
 
@@ -101,6 +109,7 @@ GO
 -- =========================================
 
 CREATE TABLE GameSessions (
+
     id UNIQUEIDENTIFIER NOT NULL PRIMARY KEY DEFAULT NEWID(),
 
     userid UNIQUEIDENTIFIER NOT NULL,
@@ -113,11 +122,12 @@ CREATE TABLE GameSessions (
 
     CHECK (endtime >= starttime),
 
-    FOREIGN KEY (userid)
-        REFERENCES Users(id),
+	deleteat DATETIME2 NULL,
 
-    FOREIGN KEY (gameid)
-        REFERENCES Games(id)
+    FOREIGN KEY (userid) REFERENCES Users(id),
+      
+    FOREIGN KEY (gameid) REFERENCES Games(id)
+        
 );
 GO
 
@@ -126,9 +136,12 @@ GO
 -- =========================================
 
 CREATE TABLE Genres (
+
     id UNIQUEIDENTIFIER NOT NULL PRIMARY KEY DEFAULT NEWID(),
 
-    name NVARCHAR(50) NOT NULL UNIQUE
+    name NVARCHAR(50) NOT NULL UNIQUE,
+
+	deleteat DATETIME2 NULL
 );
 GO
 
@@ -137,17 +150,16 @@ GO
 -- =========================================
 
 CREATE TABLE GameGenres (
+
     gameid UNIQUEIDENTIFIER NOT NULL,
 
     genreid UNIQUEIDENTIFIER NOT NULL,
 
     PRIMARY KEY (gameid, genreid),
 
-    FOREIGN KEY (gameid)
-        REFERENCES Games(id),
+    FOREIGN KEY (gameid) REFERENCES Games(id),
 
-    FOREIGN KEY (genreid)
-        REFERENCES Genres(id)
+    FOREIGN KEY (genreid) REFERENCES Genres(id)
 );
 GO
 
@@ -156,6 +168,7 @@ GO
 -- =========================================
 
 CREATE TABLE UserGames (
+
     userid UNIQUEIDENTIFIER NOT NULL,
 
     gameid UNIQUEIDENTIFIER NOT NULL,
@@ -166,11 +179,9 @@ CREATE TABLE UserGames (
 
     PRIMARY KEY (userid, gameid),
 
-    FOREIGN KEY (userid)
-        REFERENCES Users(id),
+    FOREIGN KEY (userid) REFERENCES Users(id),
 
-    FOREIGN KEY (gameid)
-        REFERENCES Games(id)
+    FOREIGN KEY (gameid) REFERENCES Games(id)
 );
 GO
 
@@ -179,22 +190,20 @@ GO
 -- =========================================
 
 CREATE TABLE Friends (
+
     userid UNIQUEIDENTIFIER NOT NULL,
 
     friendid UNIQUEIDENTIFIER NOT NULL,
 
-    status NVARCHAR(20)
-        CHECK (status IN ('pending', 'accepted', 'blocked')),
+    status NVARCHAR(20) CHECK (status IN ('pending', 'accepted', 'blocked')),
 
     createdat DATETIME2 NOT NULL DEFAULT SYSUTCDATETIME(),
 
     PRIMARY KEY (userid, friendid),
 
-    FOREIGN KEY (userid)
-        REFERENCES Users(id),
+    FOREIGN KEY (userid) REFERENCES Users(id),
 
-    FOREIGN KEY (friendid)
-        REFERENCES Users(id)
+    FOREIGN KEY (friendid) REFERENCES Users(id)
 );
 GO
 
@@ -203,6 +212,7 @@ GO
 -- =========================================
 
 CREATE TABLE Achievements (
+
     id UNIQUEIDENTIFIER NOT NULL PRIMARY KEY DEFAULT NEWID(),
 
     gameid UNIQUEIDENTIFIER NOT NULL,
@@ -211,8 +221,7 @@ CREATE TABLE Achievements (
 
     description NVARCHAR(MAX),
 
-    FOREIGN KEY (gameid)
-        REFERENCES Games(id)
+    FOREIGN KEY (gameid) REFERENCES Games(id)
 );
 GO
 
@@ -221,6 +230,7 @@ GO
 -- =========================================
 
 CREATE TABLE UserAchievements (
+
     userid UNIQUEIDENTIFIER NOT NULL,
 
     achievementid UNIQUEIDENTIFIER NOT NULL,
@@ -229,11 +239,9 @@ CREATE TABLE UserAchievements (
 
     PRIMARY KEY (userid, achievementid),
 
-    FOREIGN KEY (userid)
-        REFERENCES Users(id),
+    FOREIGN KEY (userid) REFERENCES Users(id),
 
-    FOREIGN KEY (achievementid)
-        REFERENCES Achievements(id)
+    FOREIGN KEY (achievementid) REFERENCES Achievements(id)
 );
 GO
 
@@ -242,26 +250,26 @@ GO
 -- =========================================
 
 CREATE TABLE Reviews (
+
     id UNIQUEIDENTIFIER NOT NULL PRIMARY KEY DEFAULT NEWID(),
 
     userid UNIQUEIDENTIFIER NOT NULL,
 
     gameid UNIQUEIDENTIFIER NOT NULL,
 
-    rating INT
-        CHECK (rating BETWEEN 1 AND 5),
+    rating INT CHECK (rating BETWEEN 1 AND 5),
 
     comment NVARCHAR(MAX),
 
     createdat DATETIME2 NOT NULL DEFAULT SYSUTCDATETIME(),
 
+	deleteat DATETIME2 NULL,
+
     CONSTRAINT UQ_User_Game UNIQUE (userid, gameid),
 
-    FOREIGN KEY (userid)
-        REFERENCES Users(id),
+    FOREIGN KEY (userid) REFERENCES Users(id),
 
-    FOREIGN KEY (gameid)
-        REFERENCES Games(id)
+    FOREIGN KEY (gameid) REFERENCES Games(id)
 );
 GO
 
@@ -280,6 +288,8 @@ CREATE TABLE ReviewComments (
 
     createdat DATETIME2 NOT NULL DEFAULT SYSUTCDATETIME(),
 
+	deleteat DATETIME2 NULL,
+
     FOREIGN KEY (reviewid)
         REFERENCES Reviews(id),
 
@@ -293,11 +303,14 @@ GO
 -- =========================================
 
 CREATE TABLE Wishlist (
+
     userid UNIQUEIDENTIFIER NOT NULL,
 
     gameid UNIQUEIDENTIFIER NOT NULL,
 
     addedat DATETIME2 NOT NULL DEFAULT SYSUTCDATETIME(),
+
+	deleteat DATETIME2 NULL
 
     PRIMARY KEY (userid, gameid),
 
@@ -318,15 +331,13 @@ CREATE TABLE Offers (
 
     gameid UNIQUEIDENTIFIER NOT NULL,
 
-    discountpct DECIMAL(5,2)
-        CHECK (discountpct BETWEEN 0 AND 100),
+    discountpct DECIMAL(5,2) CHECK (discountpct BETWEEN 0 AND 100),
 
     startdate DATETIME2,
 
     enddate DATETIME2,
 
-    FOREIGN KEY (gameid)
-        REFERENCES Games(id)
+    FOREIGN KEY (gameid) REFERENCES Games(id)
 );
 GO
 
