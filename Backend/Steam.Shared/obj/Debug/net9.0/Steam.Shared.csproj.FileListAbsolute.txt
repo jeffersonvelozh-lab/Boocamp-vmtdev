@@ -1,25 +1,3 @@
-C:\Users\Usuario\OneDrive\Escritorio\Boocamp V\Back end\Steam\Steam.Shared\bin\Debug\net9.0\Steam.Shared.deps.json
-C:\Users\Usuario\OneDrive\Escritorio\Boocamp V\Back end\Steam\Steam.Shared\bin\Debug\net9.0\Steam.Shared.dll
-C:\Users\Usuario\OneDrive\Escritorio\Boocamp V\Back end\Steam\Steam.Shared\bin\Debug\net9.0\Steam.Shared.pdb
-C:\Users\Usuario\OneDrive\Escritorio\Boocamp V\Back end\Steam\Steam.Shared\obj\Debug\net9.0\Steam.Shared.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Usuario\OneDrive\Escritorio\Boocamp V\Back end\Steam\Steam.Shared\obj\Debug\net9.0\Steam.Shared.AssemblyInfoInputs.cache
-C:\Users\Usuario\OneDrive\Escritorio\Boocamp V\Back end\Steam\Steam.Shared\obj\Debug\net9.0\Steam.Shared.AssemblyInfo.cs
-C:\Users\Usuario\OneDrive\Escritorio\Boocamp V\Back end\Steam\Steam.Shared\obj\Debug\net9.0\Steam.Shared.csproj.CoreCompileInputs.cache
-C:\Users\Usuario\OneDrive\Escritorio\Boocamp V\Back end\Steam\Steam.Shared\obj\Debug\net9.0\Steam.Shared.dll
-C:\Users\Usuario\OneDrive\Escritorio\Boocamp V\Back end\Steam\Steam.Shared\obj\Debug\net9.0\refint\Steam.Shared.dll
-C:\Users\Usuario\OneDrive\Escritorio\Boocamp V\Back end\Steam\Steam.Shared\obj\Debug\net9.0\Steam.Shared.pdb
-C:\Users\Usuario\OneDrive\Escritorio\Boocamp V\Back end\Steam\Steam.Shared\obj\Debug\net9.0\ref\Steam.Shared.dll
-C:\Users\Usuario\OneDrive\Escritorio\Boocamp V\Backend\Steam\Steam.Shared\bin\Debug\net9.0\Steam.Shared.deps.json
-C:\Users\Usuario\OneDrive\Escritorio\Boocamp V\Backend\Steam\Steam.Shared\bin\Debug\net9.0\Steam.Shared.dll
-C:\Users\Usuario\OneDrive\Escritorio\Boocamp V\Backend\Steam\Steam.Shared\bin\Debug\net9.0\Steam.Shared.pdb
-C:\Users\Usuario\OneDrive\Escritorio\Boocamp V\Backend\Steam\Steam.Shared\obj\Debug\net9.0\Steam.Shared.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Usuario\OneDrive\Escritorio\Boocamp V\Backend\Steam\Steam.Shared\obj\Debug\net9.0\Steam.Shared.AssemblyInfoInputs.cache
-C:\Users\Usuario\OneDrive\Escritorio\Boocamp V\Backend\Steam\Steam.Shared\obj\Debug\net9.0\Steam.Shared.AssemblyInfo.cs
-C:\Users\Usuario\OneDrive\Escritorio\Boocamp V\Backend\Steam\Steam.Shared\obj\Debug\net9.0\Steam.Shared.csproj.CoreCompileInputs.cache
-C:\Users\Usuario\OneDrive\Escritorio\Boocamp V\Backend\Steam\Steam.Shared\obj\Debug\net9.0\Steam.Shared.dll
-C:\Users\Usuario\OneDrive\Escritorio\Boocamp V\Backend\Steam\Steam.Shared\obj\Debug\net9.0\refint\Steam.Shared.dll
-C:\Users\Usuario\OneDrive\Escritorio\Boocamp V\Backend\Steam\Steam.Shared\obj\Debug\net9.0\Steam.Shared.pdb
-C:\Users\Usuario\OneDrive\Escritorio\Boocamp V\Backend\Steam\Steam.Shared\obj\Debug\net9.0\ref\Steam.Shared.dll
 C:\Users\Usuario\OneDrive\Escritorio\Boocamp V\Boocamp-vmtdev\Backend\Steam.Shared\bin\Debug\net9.0\Steam.Shared.deps.json
 C:\Users\Usuario\OneDrive\Escritorio\Boocamp V\Boocamp-vmtdev\Backend\Steam.Shared\bin\Debug\net9.0\Steam.Shared.dll
 C:\Users\Usuario\OneDrive\Escritorio\Boocamp V\Boocamp-vmtdev\Backend\Steam.Shared\bin\Debug\net9.0\Steam.Shared.pdb
