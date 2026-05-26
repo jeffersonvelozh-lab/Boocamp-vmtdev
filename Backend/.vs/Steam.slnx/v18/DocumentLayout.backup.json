@@ -62,7 +62,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
@@ -77,6 +77,14 @@
               "WhenOpened": "2026-05-24T02:03:19.183Z",
               "IsPinned": true,
               "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
             },
             {
               "$type": "Document",
@@ -175,8 +183,8 @@
               "Title": "IRolesRepository.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\Boocamp V\\Boocamp-vmtdev\\Backend\\Steam.Domain\\Interfaces\\Repositories\\IRolesRepository.cs",
               "RelativeDocumentMoniker": "Steam.Domain\\Interfaces\\Repositories\\IRolesRepository.cs",
-              "ToolTip": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\Boocamp V\\Boocamp-vmtdev\\Backend\\Steam.Domain\\Interfaces\\Repositories\\IRolesRepository.cs*",
-              "RelativeToolTip": "Steam.Domain\\Interfaces\\Repositories\\IRolesRepository.cs*",
+              "ToolTip": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\Boocamp V\\Boocamp-vmtdev\\Backend\\Steam.Domain\\Interfaces\\Repositories\\IRolesRepository.cs",
+              "RelativeToolTip": "Steam.Domain\\Interfaces\\Repositories\\IRolesRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-24T02:27:30.493Z",
@@ -233,14 +241,6 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-24T02:54:06.331Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
             }
           ]
         }

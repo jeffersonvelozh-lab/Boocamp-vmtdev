@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\Boocamp V\\Boocamp-vmtdev\\Backend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1806BC43-109B-D20E-2433-617008A32D0F}|Steam.WebApi\\Steam.WebApi.csproj|c:\\users\\usuario\\onedrive\\escritorio\\boocamp v\\boocamp-vmtdev\\backend\\steam.webapi\\extensions\\servicecollectionextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1806BC43-109B-D20E-2433-617008A32D0F}|Steam.WebApi\\Steam.WebApi.csproj|solutionrelative:steam.webapi\\extensions\\servicecollectionextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1806BC43-109B-D20E-2433-617008A32D0F}|Steam.WebApi\\Steam.WebApi.csproj|c:\\users\\usuario\\onedrive\\escritorio\\boocamp v\\boocamp-vmtdev\\backend\\steam.webapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1806BC43-109B-D20E-2433-617008A32D0F}|Steam.WebApi\\Steam.WebApi.csproj|solutionrelative:steam.webapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1806BC43-109B-D20E-2433-617008A32D0F}|Steam.WebApi\\Steam.WebApi.csproj|c:\\users\\usuario\\onedrive\\escritorio\\boocamp v\\boocamp-vmtdev\\backend\\steam.webapi\\controllers\\rolecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1806BC43-109B-D20E-2433-617008A32D0F}|Steam.WebApi\\Steam.WebApi.csproj|solutionrelative:steam.webapi\\controllers\\rolecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1806BC43-109B-D20E-2433-617008A32D0F}|Steam.WebApi\\Steam.WebApi.csproj|c:\\users\\usuario\\onedrive\\escritorio\\boocamp v\\boocamp-vmtdev\\backend\\steam.webapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1806BC43-109B-D20E-2433-617008A32D0F}|Steam.WebApi\\Steam.WebApi.csproj|solutionrelative:steam.webapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1806BC43-109B-D20E-2433-617008A32D0F}|Steam.WebApi\\Steam.WebApi.csproj|c:\\users\\usuario\\onedrive\\escritorio\\boocamp v\\boocamp-vmtdev\\backend\\steam.webapi\\extensions\\servicecollectionextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1806BC43-109B-D20E-2433-617008A32D0F}|Steam.WebApi\\Steam.WebApi.csproj|solutionrelative:steam.webapi\\extensions\\servicecollectionextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{ED12F47F-3CD8-BA58-F3DB-AED4416D1D4B}|Steam.Application\\Steam.Application.csproj|c:\\users\\usuario\\onedrive\\escritorio\\boocamp v\\boocamp-vmtdev\\backend\\steam.application\\services\\roleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -62,17 +62,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "UserController.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\Boocamp V\\Boocamp-vmtdev\\Backend\\Steam.WebApi\\Controllers\\UserController.cs",
               "RelativeDocumentMoniker": "Steam.WebApi\\Controllers\\UserController.cs",
               "ToolTip": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\Boocamp V\\Boocamp-vmtdev\\Backend\\Steam.WebApi\\Controllers\\UserController.cs",
               "RelativeToolTip": "Steam.WebApi\\Controllers\\UserController.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAACEAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAUwCEAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-24T02:03:19.183Z",
               "IsPinned": true,
@@ -94,7 +94,7 @@
               "RelativeDocumentMoniker": "Steam.WebApi\\Controllers\\RoleController.cs",
               "ToolTip": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\Boocamp V\\Boocamp-vmtdev\\Backend\\Steam.WebApi\\Controllers\\RoleController.cs",
               "RelativeToolTip": "Steam.WebApi\\Controllers\\RoleController.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAAABYAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-24T03:58:53.761Z",
               "EditorCaption": ""
@@ -109,8 +109,7 @@
               "RelativeToolTip": "Steam.Application\\Services\\RoleService.cs",
               "ViewState": "AgIAABMAAAAAAAAAAAAQwCgAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-24T03:17:35.212Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-24T03:17:35.212Z"
             },
             {
               "$type": "Document",
@@ -122,18 +121,17 @@
               "RelativeToolTip": "Steam.Application\\Services\\UserService.cs",
               "ViewState": "AgIAAD8AAAAAAAAAAAAowEkAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-24T03:08:13.784Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-24T03:08:13.784Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "ServiceCollectionExtension.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\Boocamp V\\Boocamp-vmtdev\\Backend\\Steam.WebApi\\Extensions\\ServiceCollectionExtension.cs",
               "RelativeDocumentMoniker": "Steam.WebApi\\Extensions\\ServiceCollectionExtension.cs",
               "ToolTip": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\Boocamp V\\Boocamp-vmtdev\\Backend\\Steam.WebApi\\Extensions\\ServiceCollectionExtension.cs",
               "RelativeToolTip": "Steam.WebApi\\Extensions\\ServiceCollectionExtension.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAuwB0AAABGAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAABGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-24T02:08:58.564Z",
               "EditorCaption": ""
@@ -148,8 +146,7 @@
               "RelativeToolTip": "Steam.Application\\Models\\Request\\Roles\\FilterRoleRequest.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-24T02:56:44.346Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-24T02:56:44.346Z"
             },
             {
               "$type": "Document",
@@ -161,8 +158,7 @@
               "RelativeToolTip": "Steam.Infrastructure\\Persistence\\SqlServer\\Repositories\\RolesRepository.cs",
               "ViewState": "AgIAAC0AAAAAAAAAAAAWwDwAAABSAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-24T02:31:14.147Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-24T02:31:14.147Z"
             },
             {
               "$type": "Document",
@@ -174,8 +170,7 @@
               "RelativeToolTip": "Steam.Infrastructure\\Persistence\\SqlServer\\Repositories\\UserRepository.cs",
               "ViewState": "AgIAADYAAAAAAAAAAAAowCAAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-24T02:08:33.603Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-24T02:08:33.603Z"
             },
             {
               "$type": "Document",
@@ -187,8 +182,7 @@
               "RelativeToolTip": "Steam.Domain\\Interfaces\\Repositories\\IRolesRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-24T02:27:30.493Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-24T02:27:30.493Z"
             },
             {
               "$type": "Document",
@@ -200,8 +194,7 @@
               "RelativeToolTip": "Steam.Application\\Interfaces\\Services\\IRoleService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABLAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-24T03:11:03.509Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-24T03:11:03.509Z"
             },
             {
               "$type": "Document",
@@ -213,8 +206,7 @@
               "RelativeToolTip": "Steam.Application\\Helpers\\PesponseHelper.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-24T03:07:39.257Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-24T03:07:39.257Z"
             },
             {
               "$type": "Document",
@@ -226,8 +218,7 @@
               "RelativeToolTip": "Steam.Application\\Models\\Request\\Roles\\CreateRoleRequest.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-24T02:57:11.141Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-24T02:57:11.141Z"
             },
             {
               "$type": "Document",
@@ -239,8 +230,7 @@
               "RelativeToolTip": "Steam.Application\\Models\\Dtos\\RoleDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-24T02:54:06.331Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-24T02:54:06.331Z"
             }
           ]
         }
