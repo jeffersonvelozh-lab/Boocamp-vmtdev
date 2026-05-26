@@ -1,38 +1,56 @@
-.header {
-  background-image: linear-gradient(to right, #25a39d, #1f9a40);
-  color: white;
+.topbar {
+  height: 80px;
+  background: #0b1622;
   display: flex;
-  align-items: center;
-  padding: 0 1rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  justify-content: space-between;
+  padding: 0 30px;
+  border-bottom: 1px solid #1d2a3a;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
-.logo-container {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.logo {
-  border-radius: 10px;
-  object-fit: cover;
-}
-
-.system-name {
-  font-size: 1.3rem;
-  font-weight: 600;
-  letter-spacing: 1px;
-}
-
-.spacer {
-  flex: 1;
-}
-
-button {
+.login {
   display: flex;
   align-items: center;
   gap: 6px;
   border-radius: 10px;
   padding: 10px;
+  background: white;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 28px;
+  font-weight: bold;
+  color: #4ea1ff;
+}
+
+.search-box {
+  width: 40%;
+  height: 50px;
+  background: #101d2b;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  gap: 10px;
+}
+
+.search-box input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
   color: white;
+  font-size: 15px;
+}
+
+.topbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  border-radius: 10%;
 }

@@ -1,20 +1,15 @@
-<mat-toolbar color="primary" class="header">
-  <div class="logo-container">
-    <img
-      src="https://img.magnific.com/vector-gratis/logotipo-juegos-diseno-plano_23-2150746102.jpg?semt=ais_hybrid&w=740&q=80"
-      alt="Logo empresa"
-      class="logo"
-      width="50"
-      height="30"
-    />
-
-    <span class="system-name"> ArcadeX </span>
+<mat-toolbar class="topbar">
+  <div class="logo">
+    <mat-icon>sports_esports</mat-icon>
+    <span>ArcadeX</span>
   </div>
 
-  <span class="spacer"></span>
+  <div class="search-box">
+    <mat-icon>search</mat-icon>
+    <input type="text" placeholder="Buscar juegos, DLC, categorías..." />
+  </div>
 
-  <button matButton routerLink="/login">
-    <mat-icon>login</mat-icon>
-    Iniciar sesión
-  </button>
+  <div class="topbar-actions">
+    <button matButton class="login" routerLink="/login">Iniciar sesion</button>
+  </div>
 </mat-toolbar>

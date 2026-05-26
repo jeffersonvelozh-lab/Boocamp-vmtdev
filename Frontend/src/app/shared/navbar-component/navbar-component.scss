@@ -2,11 +2,11 @@
   width: 100%;
 }
 
-mat-toolbar {
+.sidebar {
   display: flex;
   gap: 12px;
   padding: 0 1rem;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+  background: #0b1622;
 }
 
 button {

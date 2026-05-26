@@ -1,92 +1,137 @@
-<div class="about-container">
-  <section class="about-hero">
+<!-- about.component.html -->
+
+<section class="about-hero">
+  <div class="overlay">
     <div class="hero-content">
-      <h1>Sobre Nosotros</h1>
+      <span class="badge">PLATAFORMA GAMING</span>
+
+      <h1>Bienvenido a ArcadeX</h1>
+
       <p>
-        Somos una plaforma enfocada en gestionar tus video juegos, si eres una empresa que desarrola
-        video juegos esta pagina te ayuda con toda la gestión de poner los juegos en linea sin
-        gestion con terceros.
+        La nueva generación de plataformas para videojuegos. Descubre, compra y juega tus títulos
+        favoritos en un solo lugar.
       </p>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="company-info">
-    <mat-card class="info-card">
-      <mat-card-header>
-        <mat-icon mat-card-avatar> business </mat-icon>
+<section class="about-container">
+  <!-- INFO -->
 
-        <mat-card-title> Nuestra Empresa </mat-card-title>
-      </mat-card-header>
+  <div class="about-grid">
+    <div class="about-text">
+      <h2>¿Qué es ArcadeX?</h2>
 
-      <mat-card-content>
-        <p>
-          ArcadeX S.A. nace con el objetivo de ofrecer una plaforma donde una empresa desarrolladora
-          de video juegos pueda poner sus juegos en linea sin la necesidad de pagar por otras, esto
-          ofrece una autonomia .
-        </p>
-      </mat-card-content>
-    </mat-card>
-  </section>
+      <p>
+        ArcadeX es una plataforma inspirada en Steam y Epic Games, diseñada para ofrecer una
+        experiencia moderna y rápida para gamers de todo el mundo.
+      </p>
 
-  <section class="mission-vision">
-    <mat-card class="mv-card">
-      <mat-card-header>
-        <mat-icon mat-card-avatar> flag </mat-icon>
+      <p>
+        Nuestra plataforma permite explorar videojuegos, administrar bibliotecas digitales, acceder
+        a ofertas, guardar favoritos y conectar con otros jugadores.
+      </p>
 
-        <mat-card-title> Misión </mat-card-title>
-      </mat-card-header>
+      <div class="features">
+        <div class="feature-card">
+          <mat-icon>sports_esports</mat-icon>
 
-      <mat-card-content>
-        <p>
-          Proporcionar soluciones tecnológicas accesibles y de calidad para mejorar la experiencia
-          digital de nuestros usuarios.
-        </p>
-      </mat-card-content>
-    </mat-card>
+          <div>
+            <h3>+10,000 Juegos</h3>
+            <p>Explora títulos AAA e Indie.</p>
+          </div>
+        </div>
 
-    <mat-card class="mv-card">
-      <mat-card-header>
-        <mat-icon mat-card-avatar> visibility </mat-icon>
+        <div class="feature-card">
+          <mat-icon>bolt</mat-icon>
 
-        <mat-card-title> Visión </mat-card-title>
-      </mat-card-header>
+          <div>
+            <h3>Descargas Rápidas</h3>
+            <p>Servidores optimizados globalmente.</p>
+          </div>
+        </div>
 
-      <mat-card-content>
-        <p>
-          Ser una empresa líder en innovación tecnológica reconocida por la excelencia de nuestros
-          productos y servicios.
-        </p>
-      </mat-card-content>
-    </mat-card>
-  </section>
+        <div class="feature-card">
+          <mat-icon>groups</mat-icon>
 
-  <section class="values-section">
-    <h2>Nuestros Valores</h2>
-
-    <div class="values-grid">
-      <mat-card class="value-card">
-        <mat-icon> emoji_objects </mat-icon>
-
-        <h3>Innovación</h3>
-
-        <p>Buscamos constantemente nuevas ideas y tecnologías.</p>
-      </mat-card>
-
-      <mat-card class="value-card">
-        <mat-icon> groups </mat-icon>
-
-        <h3>Trabajo en Equipo</h3>
-
-        <p>Creemos en la colaboración para alcanzar grandes resultados.</p>
-      </mat-card>
-
-      <mat-card class="value-card">
-        <mat-icon> verified </mat-icon>
-
-        <h3>Calidad</h3>
-
-        <p>Garantizamos productos y servicios de alto nivel.</p>
-      </mat-card>
+          <div>
+            <h3>Comunidad Gaming</h3>
+            <p>Conecta con amigos y jugadores.</p>
+          </div>
+        </div>
+      </div>
     </div>
-  </section>
-</div>
+
+    <!-- IMAGE -->
+
+    <div class="about-image">
+      <img src="https://images.unsplash.com/photo-1542751110-97427bbecf20" alt="gaming" />
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+
+<section class="stats-section">
+  <div class="stat-card">
+    <h2>2M+</h2>
+    <p>Usuarios activos</p>
+  </div>
+
+  <div class="stat-card">
+    <h2>10K+</h2>
+    <p>Videojuegos</p>
+  </div>
+
+  <div class="stat-card">
+    <h2>120+</h2>
+    <p>Desarrolladores</p>
+  </div>
+
+  <div class="stat-card">
+    <h2>99.9%</h2>
+    <p>Uptime</p>
+  </div>
+</section>
+
+<!-- TEAM -->
+
+<section class="team-section">
+  <div class="section-title">
+    <span>NUESTRO EQUIPO</span>
+
+    <h2>Creado por Gamers para Gamers</h2>
+  </div>
+
+  <div class="team-grid">
+    <mat-card class="team-card">
+      <img mat-card-image src="https://randomuser.me/api/portraits/men/32.jpg" />
+
+      <mat-card-content>
+        <h3>Jefferson Veloz</h3>
+
+        <p>Frontend Developer</p>
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card class="team-card">
+      <img mat-card-image src="https://randomuser.me/api/portraits/women/44.jpg" />
+
+      <mat-card-content>
+        <h3>Ana Morales</h3>
+
+        <p>UI/UX Designer</p>
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card class="team-card">
+      <img mat-card-image src="https://randomuser.me/api/portraits/men/67.jpg" />
+
+      <mat-card-content>
+        <h3>Carlos Vega</h3>
+
+        <p>Backend Developer</p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</section>
