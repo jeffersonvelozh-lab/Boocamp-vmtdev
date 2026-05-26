@@ -1,1 +1,18 @@
-<p>header-component works!</p>
+<mat-toolbar color="primary" class="header">
+  <div class="logo-container">
+    <img
+      src="https://img.magnific.com/vector-gratis/plantilla-logotipo-juegos-dibujados-mano_23-2150730869.jpg?semt=ais_hybrid&w=740&q=80"
+      alt="Logo empresa"
+      class="logo"
+    />
+
+    <span class="system-name"> ArcadeX </span>
+  </div>
+
+  <span class="spacer"></span>
+
+  <button mat-raised-button color="accent" routerLink="/login">
+    <mat-icon>login</mat-icon>
+    Iniciar sesión
+  </button>
+</mat-toolbar>

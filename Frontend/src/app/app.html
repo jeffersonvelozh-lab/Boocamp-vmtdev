@@ -1,1 +1,13 @@
-<router-outlet />
+<div class="layout">
+  <mat-divider></mat-divider>
+  <app-header-component></app-header-component>
+  <div class="wrapper">
+    <mat-divider></mat-divider>
+    <app-navbar-component></app-navbar-component>
+  </div>
+  <mat-divider></mat-divider>
+  <main class="content-area">
+    <router-outlet />
+  </main>
+  <app-footer-component></app-footer-component>
+</div>
