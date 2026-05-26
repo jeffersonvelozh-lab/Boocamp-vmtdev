@@ -1,1 +1,27 @@
-<p>home-component works!</p>
+<div class="home-container">
+  @if (loading()) {
+    <div class="center">
+      <mat-progress-spinner mode="indeterminate"></mat-progress-spinner>
+    </div>
+  }
+
+  <section class="banner">
+    <div class="banner-content">
+      <h1>Bienvenidos a ArcadeX</h1>
+      <p>
+        Es una plataforma que te ayuda a gestionar, jugar y estar al tanto de todo lo relacionado al
+        mundo de los video juegos.
+      </p>
+    </div>
+  </section>
+
+  <section class="section 3">
+    <img
+      src="https://img.magnific.com/vector-gratis/logotipo-juegos-diseno-plano_23-2150746102.jpg?semt=ais_hybrid&w=740&q=80"
+      alt="Es el logo de la plataforma"
+      width="400"
+      height="400"
+    />
+  </section>
+  <div class="grid"></div>
+</div>
